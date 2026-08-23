@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://djhky8qb4vngw"]
+
+[ext_resource type="Script" uid="uid://bdii5u6gqdetr" path="res://connection/Connection.gd" id="1_ff2sp"]
+
+[node name="Connection" type="Area2D" unique_id=202580876]
+script = ExtResource("1_ff2sp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=343096505]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=843554145]
+position = Vector2(26, 14)
+polygon = PackedVector2Array(7, -10, 33, -4, 44, 21, 5, 32)

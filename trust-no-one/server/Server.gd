@@ -1,5 +1,8 @@
 @tool
+@icon("res://server/sprite.png")
+class_name Server
 extends Node2D
+
 
 @export var power: float = 0:
 	set(val):
@@ -11,6 +14,8 @@ extends Node2D
 	set(val):
 		color = val
 		$Sprite.modulate = color
+		
+@export var player_owned: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

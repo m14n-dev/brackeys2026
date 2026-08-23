@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bpp8r1vb02pwm"]
+
+[ext_resource type="Texture2D" uid="uid://c182tgjt45lgc" path="res://arena_1/arena_1.png" id="1_hm5in"]
+[ext_resource type="PackedScene" uid="uid://djhky8qb4vngw" path="res://connection/Connection.tscn" id="2_smhlq"]
+[ext_resource type="Texture2D" uid="uid://ehggjbg2qso7" path="res://arena_1/connection_1.png" id="3_4gwnt"]
+[ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="4_bdtki"]
+
+[node name="Arena" type="Node2D" unique_id=52630319]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1230826979]
+position = Vector2(576, 324)
+texture = ExtResource("1_hm5in")
+
+[node name="Connection" parent="." unique_id=202580876 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("2_smhlq")]
+point_a = NodePath("../server 1")
+point_b = NodePath("../server 3")
+
+[node name="Sprite2D" parent="Connection" index="0" unique_id=343096505]
+position = Vector2(611, 345)
+scale = Vector2(1, 1.01)
+texture = ExtResource("3_4gwnt")
+
+[node name="CollisionPolygon2D" parent="Connection" index="1" unique_id=843554145]
+polygon = PackedVector2Array(480, 382, 715, 246, 730, 255, 480, 400)
+
+[node name="server 1" parent="." unique_id=1404967565 instance=ExtResource("4_bdtki")]
+position = Vector2(415, 409)
+color = Color(0.36506572, 0.75844383, 0.49731195, 1)
+player_owned = true
+
+[node name="server 3" parent="." unique_id=848627415 instance=ExtResource("4_bdtki")]
+position = Vector2(805, 182)
+power = 10.0
+growth = 1.5
+color = Color(0.80492216, 0.29508358, 0.2622645, 1)
+player_owned = null
+
+[editable path="Connection"]
