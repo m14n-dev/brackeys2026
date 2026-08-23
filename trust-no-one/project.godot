@@ -11,13 +11,19 @@ config_version=5
 [application]
 
 config/name="trust-no-one"
+run/main_scene="uid://bpp8r1vb02pwm"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+run/max_fps=300
 config/icon="res://icon.svg"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[dotnet]
+
+project/assembly_name="trust-no-one"
 
 [physics]
 
