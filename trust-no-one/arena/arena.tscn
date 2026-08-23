@@ -1,21 +1,20 @@
 [gd_scene format=3 uid="uid://bpp8r1vb02pwm"]
 
 [ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="1_dkqtx"]
+[ext_resource type="Texture2D" uid="uid://c182tgjt45lgc" path="res://arena/arena_1.png" id="1_u13ga"]
 
 [node name="Arena" type="Node2D" unique_id=52630319]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1230826979]
+position = Vector2(576, 324)
+texture = ExtResource("1_u13ga")
+
 [node name="server 1" parent="." unique_id=1404967565 instance=ExtResource("1_dkqtx")]
-position = Vector2(232, 160)
+position = Vector2(416, 410)
 color = Color(0.36506572, 0.75844383, 0.49731195, 1)
 
-[node name="server 2" parent="." unique_id=2010207897 instance=ExtResource("1_dkqtx")]
-position = Vector2(811, 167)
-power = 10.0
-growth = 1.5
-color = Color(0.25199077, 0.6508553, 0.5741406, 1)
-
 [node name="server 3" parent="." unique_id=848627415 instance=ExtResource("1_dkqtx")]
-position = Vector2(517, 455)
+position = Vector2(805, 182)
 power = 10.0
 growth = 1.5
 color = Color(0.80492216, 0.29508358, 0.2622645, 1)
