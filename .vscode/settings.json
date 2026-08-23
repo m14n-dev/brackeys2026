@@ -1,0 +1,15 @@
+{
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nixd",
+    "nix.serverSettings": {
+        "nixd": {
+            "formatting": {
+                "command": [
+                    "nixfmt"
+                ]
+            }
+        }
+    },
+    "editor.formatOnSave": true,
+    "rust-analyzer.check.command": "clippy",
+}
