@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://1180y6xoadvr"]
+
+[ext_resource type="Script" uid="uid://b1g7g83rbv57v" path="res://package/Package.gd" id="1_d4bn5"]
+[ext_resource type="Texture2D" uid="uid://clwwf43ce7dav" path="res://package/package.png" id="1_ere0q"]
+
+[node name="Package" type="PathFollow2D" unique_id=526672067]
+rotates = false
+loop = false
+script = ExtResource("1_d4bn5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2083196437]
+position = Vector2(0, -10)
+texture = ExtResource("1_ere0q")

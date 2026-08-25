@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bdii5u6gqdetr" path="res://connection/Connection.gd" id="1_ff2sp"]
 
+[sub_resource type="Curve2D" id="Curve2D_ff2sp"]
+
 [node name="Connection" type="Area2D" unique_id=202580876]
 script = ExtResource("1_ff2sp")
 
@@ -10,3 +12,6 @@ script = ExtResource("1_ff2sp")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=843554145]
 position = Vector2(26, 14)
 polygon = PackedVector2Array(7, -10, 33, -4, 44, 21, 5, 32)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=860685861]
+curve = SubResource("Curve2D_ff2sp")

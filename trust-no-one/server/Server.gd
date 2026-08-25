@@ -7,7 +7,7 @@ extends Node2D
 @export var power: float = 0:
 	set(val):
 		power = val
-		$Label.text = str(floor(power))
+		$Label.text = "%.1f" % power
 		
 @export var growth: float = 0
 @export var color: Color = Color.WHITE:
@@ -26,3 +26,13 @@ func _process(delta):
 	if Engine.is_editor_hint():
 		return
 	power += growth * delta
+	
+func recv_package(package: Package):
+	if package.color == self.color:
+		self.power += package.power
+	else:
+		self.power -= package.power
+		if self.power < 0:
+			self.power = -self.power
+			self.color = package.color
+			self.player_owned = package.player_owned

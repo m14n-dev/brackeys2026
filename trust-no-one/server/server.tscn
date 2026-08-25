@@ -6,6 +6,7 @@
 [node name="Node2D" type="Node2D" unique_id=1404967565]
 script = ExtResource("1_0wvpq")
 growth = 1.0
+player_owned = null
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=421985702]
 texture = ExtResource("2_u3pyk")
