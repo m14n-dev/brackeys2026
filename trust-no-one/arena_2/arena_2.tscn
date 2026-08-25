@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://chkhsfigpcb2c"]
+
+[ext_resource type="Texture2D" uid="uid://b2j2kpyfmw8em" path="res://arena_2/arena_2.png" id="1_rge3m"]
+[ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="2_civo4"]
+[ext_resource type="PackedScene" uid="uid://djhky8qb4vngw" path="res://connection/Connection.tscn" id="3_gmqf0"]
+[ext_resource type="Texture2D" uid="uid://cs0n45qvyq32h" path="res://arena_2/connection_1_to_2.png" id="4_agy5j"]
+[ext_resource type="Texture2D" uid="uid://cn6mb8s5tqrae" path="res://arena_2/connection_1_to_3.png" id="5_bmjv0"]
+[ext_resource type="Texture2D" uid="uid://bafxjfvvr7o2a" path="res://arena_2/connection_2_to_3.png" id="6_e3ww1"]
+
+[sub_resource type="Curve2D" id="Curve2D_agy5j"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, -49, 0, 0, 0, 0, 292, -49, 0, 0, 0, 0, 352, -83)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_bmjv0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 83, 49, 0, 0, 0, 0, 292, 49, 0, 0, 0, 0, 348, 82)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_e3ww1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, -1, 0, 0, 0, 0, -65, 38, 0, 0, 0, 0, -65, 165, 0, 0, 0, 0, -1, 204)
+}
+point_count = 4
+
+[node name="Arena2" type="Node2D" unique_id=428041530]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1189035911]
+position = Vector2(576, 324)
+texture = ExtResource("1_rge3m")
+
+[node name="conn_1_to_2" parent="." unique_id=202580876 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("3_gmqf0")]
+point_a = NodePath("../server1")
+point_b = NodePath("../server2")
+max_package_size = 2
+
+[node name="Sprite2D" parent="conn_1_to_2" index="0" unique_id=343096505]
+position = Vector2(571, 263)
+texture = ExtResource("4_agy5j")
+
+[node name="CollisionPolygon2D" parent="conn_1_to_2" index="1" unique_id=843554145]
+polygon = PackedVector2Array(741, 216, 756, 225, 690, 263, 482, 263, 402, 308, 389, 300, 480, 247, 688, 247)
+
+[node name="PathAtoB" parent="conn_1_to_2" index="2" unique_id=860685861]
+position = Vector2(396, 304)
+curve = SubResource("Curve2D_agy5j")
+
+[node name="server1" parent="." unique_id=1404967565 instance=ExtResource("2_civo4")]
+position = Vector2(339, 288)
+color = Color(0.36506572, 0.75844383, 0.49731195, 1)
+player_owned = true
+
+[node name="server2" parent="." unique_id=172511505 instance=ExtResource("2_civo4")]
+position = Vector2(818, 144)
+growth = 1.5
+color = Color(0.39, 1, 0.9491666, 1)
+player_owned = false
+
+[node name="conn_1_to_3" parent="." unique_id=70217481 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("3_gmqf0")]
+point_a = NodePath("../server1")
+point_b = NodePath("../server3")
+max_package_size = 2
+
+[node name="Sprite2D" parent="conn_1_to_3" index="0" unique_id=343096505]
+position = Vector2(571, 412)
+texture = ExtResource("5_bmjv0")
+
+[node name="CollisionPolygon2D" parent="conn_1_to_3" index="1" unique_id=843554145]
+polygon = PackedVector2Array(480, 429, 388, 375, 402, 366, 481, 411, 690, 411, 756, 450, 740, 459, 688, 429)
+
+[node name="PathAtoB" parent="conn_1_to_3" index="2" unique_id=860685861]
+position = Vector2(397, 371)
+curve = SubResource("Curve2D_bmjv0")
+
+[node name="Connection" parent="." unique_id=1938539089 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("3_gmqf0")]
+point_a = NodePath("../server2")
+point_b = NodePath("../server3")
+max_package_size = 2
+
+[node name="Sprite2D" parent="Connection" index="0" unique_id=343096505]
+position = Vector2(740, 338)
+texture = ExtResource("6_e3ww1")
+
+[node name="CollisionPolygon2D" parent="Connection" index="1" unique_id=843554145]
+polygon = PackedVector2Array(700, 407, 700, 270, 766, 231, 781, 240, 716, 278, 716, 396, 781, 436, 766, 445)
+
+[node name="PathAtoB" parent="Connection" index="2" unique_id=860685861]
+position = Vector2(773, 236)
+curve = SubResource("Curve2D_e3ww1")
+
+[node name="server3" parent="." unique_id=2014041129 instance=ExtResource("2_civo4")]
+position = Vector2(818, 429)
+growth = 1.5
+color = Color(0.9595035, 0.8219891, 0.6009722, 1)
+player_owned = false
+
+[editable path="conn_1_to_2"]
+[editable path="conn_1_to_3"]
+[editable path="Connection"]

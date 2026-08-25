@@ -9,7 +9,7 @@
    id="svg1"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
    sodipodi:docname="arena_2.svg"
-   inkscape:export-filename="..\arena\arena_1.png"
+   inkscape:export-filename="..\arena_2\arena_2.png"
    inkscape:export-xdpi="28.799999"
    inkscape:export-ydpi="28.799999"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,9 +28,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="0.17972959"
-     inkscape:cx="1702.5577"
-     inkscape:cy="787.29386"
+     inkscape:zoom="0.35945918"
+     inkscape:cx="2069.7761"
+     inkscape:cy="1136.4295"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
@@ -2097,20 +2097,25 @@
        id="path12-5-8-5-8" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 412.44459,370.41666 11.45679,6.61458 240.59268,-138.90625 -11.45681,-6.61458 z"
+       d="m 618.66688,357.18749 57.28397,33.07291 11.45679,-6.61458 -57.28397,-33.07291 0,-105.83333 57.28397,-33.07292 -11.45679,-6.61458 -57.28397,33.07291 z"
        id="path3"
-       sodipodi:nodetypes="ccccc"
-       inkscape:export-filename="..\arena_1\connection_1.png"
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:export-filename="..\arena_2\connection_2_to_3.png"
        inkscape:export-xdpi="28.799999"
        inkscape:export-ydpi="28.799999" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 630.12367,205.05208 80.19756,46.30206 80.19756,-46.30206 L 710.32123,158.75 Z"
+       d="m 641.58047,171.97918 80.19756,46.30206 80.19756,-46.30206 -80.19756,-46.30208 z"
        id="path2-8"
        sodipodi:nodetypes="ccccc" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 286.41985,403.48957 80.19756,46.30208 80.19756,-46.30207 -80.19756,-46.30209 z"
+       d="m 641.58047,423.33332 80.19756,46.30206 80.19756,-46.30206 -80.19756,-46.30208 z"
+       id="path2-8-5"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 217.94367,297.7708 80.19756,46.30208 80.19756,-46.30207 -80.19756,-46.30209 z"
        id="path2"
        sodipodi:nodetypes="ccccc" />
     <path
@@ -2138,5 +2143,21 @@
        d="m -146.64696,547.68748 v -5.29165 l 9.16543,-5.29168 -4.58271,7.95989 z"
        id="path22"
        sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 664.49405,396.875 -11.4568,6.61458 -45.82716,-26.45834 -183.18498,2e-5 -80.32128,-46.3021 11.45679,-6.61459 68.74076,39.6875 183.30871,0 z"
+       id="path23"
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:export-filename="..\arena_2\connection_1_to_3.png"
+       inkscape:export-xdpi="28.799999"
+       inkscape:export-ydpi="28.799999" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 653.32607,191.93751 -46.03663,26.45833 -183.38806,-0.1146 -79.90874,46.41669 11.16798,6.49998 68.74076,-39.6875 183.59752,0.1146 57.28397,-33.07291 z"
+       id="path24"
+       sodipodi:nodetypes="ccccccccc"
+       inkscape:export-filename="..\arena_2\connection_1_to_2.png"
+       inkscape:export-xdpi="28.799999"
+       inkscape:export-ydpi="28.799999" />
   </g>
 </svg>
