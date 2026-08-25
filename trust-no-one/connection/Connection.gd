@@ -8,6 +8,7 @@ extends Area2D
 
 const PackageScene = preload("res://package/Package.tscn")
 
+@onready var reverse_path: Path2D = mk_reverse_path()
 
 enum State {
 	PASSIVE,
@@ -27,6 +28,22 @@ func _process(delta):
 	time_since_last += delta
 	if time_since_last >= interval and state != State.PASSIVE:
 		try_spawn_package()
+		
+func mk_reverse_path() -> Path2D:
+	var atob_curve: Curve2D = $PathAtoB.curve
+	var n = atob_curve.point_count
+	
+	var path = Path2D.new()
+	path.position = $PathAtoB.position + atob_curve.get_point_position(n - 1)
+	path.curve = Curve2D.new()
+	path.curve.add_point(Vector2(0,0))
+	for i in range(n - 1):
+		# points constructed in reverse by pointing them backwards from the end point
+		var pt = atob_curve.get_point_position(n - i - 2) - atob_curve.get_point_position(n - 1)
+		path.curve.add_point(pt)
+	
+	add_child(path)
+	return path
 		
 func source() -> Server:
 	match state:
@@ -53,7 +70,10 @@ func try_spawn_package():
 		package.dest = sink()
 		package.player_owned = source.player_owned
 
-		$Path2D.add_child(package)
+		if state == State.A_TO_B:
+			$PathAtoB.add_child(package)
+		else:
+			reverse_path.add_child(package)
 
 		time_since_last = 0
 		
