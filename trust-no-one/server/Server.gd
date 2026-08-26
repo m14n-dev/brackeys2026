@@ -19,6 +19,10 @@ extends Node2D
 
 var ports: Array[Port] = []
 
+var lockdown: bool = false # Powers can lock down servers, preventing them from sending/receiving packages
+var production_pause: bool = false # Powers can stop production temporarily
+var production_increase: bool = false # Powers can boost production temporarily
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -27,7 +31,10 @@ func _ready():
 func _process(delta):
 	if Engine.is_editor_hint():
 		return
-	power += growth * delta
+	
+	if !production_pause:
+		var production_multiplier: float = 2 if production_increase else 1
+		power += growth * production_multiplier * delta
 	
 func add_port(port: Port):
 	self.ports.append(port)

@@ -34,6 +34,9 @@ func _process(delta) -> void:
 		time_since_last = 0
 
 func try_spawn_package():
+	if server.lockdown || peer.server.lockdown :
+		return
+	
 	var consume = floor(min(server.power, connection.max_package_size))
 	server.power -= consume
 
