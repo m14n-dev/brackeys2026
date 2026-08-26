@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bpvn1i2hiycx4"]
+
+[ext_resource type="Script" uid="uid://cwajms2nykuxs" path="res://port/Port.gd" id="1_211fk"]
+[ext_resource type="Texture2D" uid="uid://nhp7sgve4mhd" path="res://port/port.png" id="1_dpqal"]
+
+[node name="Port" type="Area2D" unique_id=954255240]
+script = ExtResource("1_211fk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1218051130]
+texture = ExtResource("1_dpqal")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=253898275]
+position = Vector2(-0.5, -1)
+polygon = PackedVector2Array(-13.5, 1, 0.5, 10, 15.5, 1, 0.5, -8)

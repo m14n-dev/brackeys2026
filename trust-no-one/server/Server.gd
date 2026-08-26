@@ -17,9 +17,7 @@ extends Node2D
 		
 @export var player_owned: bool = false
 
-var lockdown: bool = false # Powers can lock down servers, preventing them from sending/receiving packages
-var production_pause: bool = false # Powers can stop production temporarily
-var production_increase: bool = false # Powers can boost production temporarily
+var ports: Array[Port] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -29,10 +27,10 @@ func _ready():
 func _process(delta):
 	if Engine.is_editor_hint():
 		return
+	power += growth * delta
 	
-	if !production_pause:
-		var production_multiplier: float = 2 if production_increase else 1
-		power += growth * production_multiplier * delta
+func add_port(port: Port):
+	self.ports.append(port)
 	
 func recv_package(package: Package):
 	if package.color == self.color:
@@ -43,3 +41,5 @@ func recv_package(package: Package):
 			self.power = -self.power
 			self.color = package.color
 			self.player_owned = package.player_owned
+			for port in self.ports:
+				port.online = false

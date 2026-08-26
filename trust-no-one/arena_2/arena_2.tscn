@@ -9,19 +9,19 @@
 
 [sub_resource type="Curve2D" id="Curve2D_agy5j"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, -49, 0, 0, 0, 0, 292, -49, 0, 0, 0, 0, 352, -83)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 92, 53, 0, 0, 0, 0, 273, 53, 0, 0, 0, 0, 365, 0)
 }
 point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_bmjv0"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 83, 49, 0, 0, 0, 0, 292, 49, 0, 0, 0, 0, 348, 82)
+"points": PackedVector2Array(0, 0, 0, 0, -1, -1, 0, 0, 0, 0, 116, 67, 0, 0, 0, 0, 272, 67, 0, 0, 0, 0, 294, 81, 0, 0, 0, 0, 294, 197, 0, 0, 0, 0, 376, 247)
 }
-point_count = 4
+point_count = 6
 
 [sub_resource type="Curve2D" id="Curve2D_e3ww1"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, -1, 0, 0, 0, 0, -65, 38, 0, 0, 0, 0, -65, 165, 0, 0, 0, 0, -1, 204)
+"points": PackedVector2Array(0, 0, 0, 0, 0, -1, 0, 0, 0, 0, -98, 56, 0, 0, 0, 0, -98, 183, 0, 0, 0, 0, -39, 217)
 }
 point_count = 4
 
@@ -34,26 +34,29 @@ texture = ExtResource("1_rge3m")
 [node name="conn_1_to_2" parent="." unique_id=202580876 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("3_gmqf0")]
 point_a = NodePath("../server1")
 point_b = NodePath("../server2")
-max_package_size = 2
+max_package_size = 5
 
 [node name="Sprite2D" parent="conn_1_to_2" index="0" unique_id=343096505]
-position = Vector2(571, 263)
+position = Vector2(597, 227)
 texture = ExtResource("4_agy5j")
 
-[node name="CollisionPolygon2D" parent="conn_1_to_2" index="1" unique_id=843554145]
-polygon = PackedVector2Array(741, 216, 756, 225, 690, 263, 482, 263, 402, 308, 389, 300, 480, 247, 688, 247)
-
-[node name="PathAtoB" parent="conn_1_to_2" index="2" unique_id=860685861]
-position = Vector2(396, 304)
+[node name="PathAtoB" parent="conn_1_to_2" index="1" unique_id=860685861]
+position = Vector2(415, 202)
 curve = SubResource("Curve2D_agy5j")
 
+[node name="PortA" parent="conn_1_to_2" index="2" unique_id=954255240]
+position = Vector2(415, 202)
+
+[node name="PortB" parent="conn_1_to_2" index="3" unique_id=706148699]
+position = Vector2(779, 202)
+
 [node name="server1" parent="." unique_id=1404967565 instance=ExtResource("2_civo4")]
-position = Vector2(339, 288)
+position = Vector2(338, 121)
 color = Color(0.36506572, 0.75844383, 0.49731195, 1)
 player_owned = true
 
 [node name="server2" parent="." unique_id=172511505 instance=ExtResource("2_civo4")]
-position = Vector2(818, 144)
+position = Vector2(857, 121)
 growth = 1.5
 color = Color(0.39, 1, 0.9491666, 1)
 player_owned = false
@@ -61,41 +64,47 @@ player_owned = false
 [node name="conn_1_to_3" parent="." unique_id=70217481 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("3_gmqf0")]
 point_a = NodePath("../server1")
 point_b = NodePath("../server3")
-max_package_size = 2
+max_package_size = 5
 
 [node name="Sprite2D" parent="conn_1_to_3" index="0" unique_id=343096505]
-position = Vector2(571, 412)
+position = Vector2(578, 341)
 texture = ExtResource("5_bmjv0")
 
-[node name="CollisionPolygon2D" parent="conn_1_to_3" index="1" unique_id=843554145]
-polygon = PackedVector2Array(480, 429, 388, 375, 402, 366, 481, 411, 690, 411, 756, 450, 740, 459, 688, 429)
-
-[node name="PathAtoB" parent="conn_1_to_3" index="2" unique_id=860685861]
-position = Vector2(397, 371)
+[node name="PathAtoB" parent="conn_1_to_3" index="1" unique_id=860685861]
+position = Vector2(390, 218)
 curve = SubResource("Curve2D_bmjv0")
 
-[node name="Connection" parent="." unique_id=1938539089 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("3_gmqf0")]
+[node name="PortA" parent="conn_1_to_3" index="2" unique_id=954255240]
+position = Vector2(389, 217)
+
+[node name="PortB" parent="conn_1_to_3" index="3" unique_id=706148699]
+position = Vector2(766, 465)
+
+[node name="conn_2_to_3" parent="." unique_id=1938539089 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("3_gmqf0")]
 point_a = NodePath("../server2")
 point_b = NodePath("../server3")
 max_package_size = 2
 
-[node name="Sprite2D" parent="Connection" index="0" unique_id=343096505]
-position = Vector2(740, 338)
+[node name="Sprite2D" parent="conn_2_to_3" index="0" unique_id=343096505]
+position = Vector2(763, 326)
 texture = ExtResource("6_e3ww1")
 
-[node name="CollisionPolygon2D" parent="Connection" index="1" unique_id=843554145]
-polygon = PackedVector2Array(700, 407, 700, 270, 766, 231, 781, 240, 716, 278, 716, 396, 781, 436, 766, 445)
-
-[node name="PathAtoB" parent="Connection" index="2" unique_id=860685861]
-position = Vector2(773, 236)
+[node name="PathAtoB" parent="conn_2_to_3" index="1" unique_id=860685861]
+position = Vector2(806, 218)
 curve = SubResource("Curve2D_e3ww1")
 
+[node name="PortA" parent="conn_2_to_3" index="2" unique_id=954255240]
+position = Vector2(806, 217)
+
+[node name="PortB" parent="conn_2_to_3" index="3" unique_id=706148699]
+position = Vector2(767, 435)
+
 [node name="server3" parent="." unique_id=2014041129 instance=ExtResource("2_civo4")]
-position = Vector2(818, 429)
+position = Vector2(857, 451)
 growth = 1.5
 color = Color(0.9595035, 0.8219891, 0.6009722, 1)
 player_owned = false
 
 [editable path="conn_1_to_2"]
 [editable path="conn_1_to_3"]
-[editable path="Connection"]
+[editable path="conn_2_to_3"]

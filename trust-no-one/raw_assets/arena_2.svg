@@ -7,9 +7,9 @@
    viewBox="0 0 1016 571.5"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    sodipodi:docname="arena_2.svg"
-   inkscape:export-filename="..\arena_2\arena_2.png"
+   inkscape:export-filename="../arena_2/arena_2.png"
    inkscape:export-xdpi="28.799999"
    inkscape:export-ydpi="28.799999"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,13 +28,13 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="0.35945918"
-     inkscape:cx="2069.7761"
-     inkscape:cy="1136.4295"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
+     inkscape:zoom="0.25417602"
+     inkscape:cx="2740.227"
+     inkscape:cy="999.30749"
+     inkscape:window-width="1745"
+     inkscape:window-height="926"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1">
     <inkscape:grid
@@ -78,7 +78,8 @@
        y1="-222.25"
        x2="508"
        y2="793.75"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-3.8867187e-7)" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -90,7 +91,7 @@
        width="1016"
        height="571.5"
        x="0"
-       y="0" />
+       y="9.5367432e-06" />
     <g
        id="g7"
        transform="translate(-527.01253,66.145827)"
@@ -2097,25 +2098,25 @@
        id="path12-5-8-5-8" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 618.66688,357.18749 57.28397,33.07291 11.45679,-6.61458 -57.28397,-33.07291 0,-105.83333 57.28397,-33.07292 -11.45679,-6.61458 -57.28397,33.07291 z"
+       d="m 618.66688,357.18749 41.24446,23.8125 v 5.29167 l 11.45679,6.61458 h 9.16544 l 11.45679,-6.61458 v -5.29167 l -11.45679,-6.61458 h -9.16544 l -41.24446,-23.8125 V 244.73958 l 75.61484,-43.65625 h 9.16544 l 11.45679,-6.61459 v -5.29166 l -11.45679,-6.61459 h -9.16544 l -11.45679,6.61459 v 5.29166 l -75.61484,43.65625 z"
        id="path3"
-       sodipodi:nodetypes="ccccccccc"
-       inkscape:export-filename="..\arena_2\connection_2_to_3.png"
+       sodipodi:nodetypes="ccccccccccccccccccccc"
+       inkscape:export-filename="../arena_2/connection_2_to_3.png"
        inkscape:export-xdpi="28.799999"
        inkscape:export-ydpi="28.799999" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 641.58047,171.97918 80.19756,46.30206 80.19756,-46.30206 -80.19756,-46.30208 z"
+       d="m 675.95085,152.13541 80.19756,46.30206 80.19756,-46.30206 -80.19756,-46.30208 z"
        id="path2-8"
        sodipodi:nodetypes="ccccc" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 641.58047,423.33332 80.19756,46.30206 80.19756,-46.30206 -80.19756,-46.30208 z"
+       d="m 675.95085,443.17707 80.19756,46.30206 80.19756,-46.30206 -80.19756,-46.30208 z"
        id="path2-8-5"
        sodipodi:nodetypes="ccccc" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 217.94367,297.7708 80.19756,46.30208 80.19756,-46.30207 -80.19756,-46.30209 z"
+       d="m 217.67908,152.13541 80.19756,46.30208 80.19756,-46.30207 -80.19756,-46.30209 z"
        id="path2"
        sodipodi:nodetypes="ccccc" />
     <path
@@ -2145,19 +2146,72 @@
        sodipodi:nodetypes="ccccc" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 664.49405,396.875 -11.4568,6.61458 -45.82716,-26.45834 -183.18498,2e-5 -80.32128,-46.3021 11.45679,-6.61459 68.74076,39.6875 183.30871,0 z"
+       d="m 691.99036,407.45832 v 5.29167 l -11.45679,6.61458 h -9.16544 l -11.45679,-6.61458 v -5.29167 L 595.75329,370.41666 V 264.58333 l -11.4568,-6.6146 -137.48152,1e-5 -98.52843,-56.88541 h -9.16543 l -11.4568,-6.61459 v -5.29166 l 11.4568,-6.61459 h 9.16543 l 11.4568,6.61459 v 5.29166 l 87.07163,50.27084 H 584.2965 l 22.91359,13.22916 v 105.83333 c 15.27572,8.81945 38.47566,22.21391 64.15804,37.04167 h 9.16544 z"
        id="path23"
-       sodipodi:nodetypes="ccccccccc"
-       inkscape:export-filename="..\arena_2\connection_1_to_3.png"
+       sodipodi:nodetypes="ccccccccccccccccccccccccc"
+       inkscape:export-filename="../arena_2/connection_1_to_3.png"
        inkscape:export-xdpi="28.799999"
        inkscape:export-ydpi="28.799999" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 653.32607,191.93751 -46.03663,26.45833 -183.38806,-0.1146 -79.90874,46.41669 11.16798,6.49998 68.74076,-39.6875 183.59752,0.1146 57.28397,-33.07291 z"
+       d="m 691.99037,169.33328 h -9.16544 l -11.45679,6.61458 v 5.29167 l -64.0787,37.15631 -160.47447,-0.1146 -64.15805,-37.04166 v -5.29167 l -11.45679,-6.61458 h -9.16544 l -11.45679,6.61458 v 5.29167 l 11.45679,6.61458 h 9.16544 l 75.71933,43.7531 160.57944,0.0178 75.32603,-43.7709 h 9.16544 l 11.45679,-6.61458 v -5.29167 z"
        id="path24"
-       sodipodi:nodetypes="ccccccccc"
-       inkscape:export-filename="..\arena_2\connection_1_to_2.png"
+       sodipodi:nodetypes="ccccccccccccccccccccc"
+       inkscape:export-filename="../arena_2/connection_1_to_2.png"
        inkscape:export-xdpi="28.799999"
        inkscape:export-ydpi="28.799999" />
+    <path
+       style="fill:#bbbbbb;fill-opacity:1;stroke-width:1;stroke-linejoin:round"
+       d="m 710.32125,198.43749 v -13.22916 l 11.45678,6.61458 z"
+       id="path1" />
+    <path
+       style="fill:#e2e2e2;stroke-width:1;stroke-linejoin:round"
+       d="m 710.32125,198.43749 -11.4568,-6.61458 11.4568,-6.61458 z"
+       id="path4" />
+    <path
+       style="fill:#bbbbbb;fill-opacity:1;stroke-width:1;stroke-linejoin:round"
+       d="m 687.40766,185.20832 v -13.22916 l 11.45678,6.61458 z"
+       id="path1-6" />
+    <path
+       style="fill:#e2e2e2;stroke-width:1;stroke-linejoin:round"
+       d="m 687.40766,185.20832 -11.4568,-6.61458 11.4568,-6.61458 z"
+       id="path4-2" />
+    <path
+       style="fill:#bbbbbb;fill-opacity:1;stroke-width:1;stroke-linejoin:round"
+       d="m 343.70383,198.43749 v -13.22916 l 11.45678,6.61458 z"
+       id="path1-6-0"
+       inkscape:export-filename="../arena_2/connection_1_to_3.png"
+       inkscape:export-xdpi="28.799999"
+       inkscape:export-ydpi="28.799999" />
+    <path
+       style="fill:#e2e2e2;stroke-width:1;stroke-linejoin:round"
+       d="m 343.70383,198.43749 -11.4568,-6.61458 11.4568,-6.61458 z"
+       id="path4-2-6" />
+    <path
+       style="fill:#bbbbbb;fill-opacity:1;stroke-width:1;stroke-linejoin:round"
+       d="m 366.61741,185.20832 v -13.22916 l 11.45678,6.61458 z"
+       id="path1-6-2"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#e2e2e2;stroke-width:1;stroke-linejoin:round"
+       d="m 366.61741,185.20832 -11.4568,-6.61458 11.4568,-6.61458 z"
+       id="path4-2-7"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#bbbbbb;fill-opacity:1;stroke-width:1;stroke-linejoin:round"
+       d="m 675.95086,390.2604 v -13.22916 l 11.45678,6.61458 z"
+       id="path1-9" />
+    <path
+       style="fill:#e2e2e2;stroke-width:1;stroke-linejoin:round"
+       d="m 675.95086,390.2604 -11.4568,-6.61458 11.4568,-6.61458 z"
+       id="path4-20" />
+    <path
+       style="fill:#bbbbbb;fill-opacity:1;stroke-width:1;stroke-linejoin:round"
+       d="m 675.95085,416.71873 v -13.22916 l 11.45678,6.61458 z"
+       id="path1-9-3" />
+    <path
+       style="fill:#e2e2e2;stroke-width:1;stroke-linejoin:round"
+       d="m 675.95085,416.71873 -11.4568,-6.61458 11.4568,-6.61458 z"
+       id="path4-20-5" />
   </g>
 </svg>

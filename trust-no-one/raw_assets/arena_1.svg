@@ -7,7 +7,7 @@
    viewBox="0 0 1016 571.5"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    sodipodi:docname="arena_1.svg"
    inkscape:export-filename="..\arena\arena_1.png"
    inkscape:export-xdpi="28.799999"
@@ -28,13 +28,13 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="5.7513468"
-     inkscape:cx="-514.66206"
-     inkscape:cy="2009.5293"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
+     inkscape:zoom="0.80878314"
+     inkscape:cx="2093.8864"
+     inkscape:cy="1097.9457"
+     inkscape:window-width="1745"
+     inkscape:window-height="926"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1">
     <inkscape:grid
@@ -59,6 +59,18 @@
   <defs
      id="defs1">
     <linearGradient
+       id="linearGradient8"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#98e286;stop-opacity:1;"
+         offset="0"
+         id="stop8" />
+      <stop
+         style="stop-color:#e2e2e2;stop-opacity:0;"
+         offset="1"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
        id="linearGradient1"
        inkscape:collect="always">
       <stop
@@ -79,6 +91,25 @@
        x2="508"
        y2="793.75"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient9"
+       x1="650.74591"
+       y1="244.73958"
+       x2="655.32861"
+       y2="236.80208"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8"
+       id="linearGradient10"
+       gradientUnits="userSpaceOnUse"
+       x1="659.91132"
+       y1="244.73958"
+       x2="664.49402"
+       y2="236.80208"
+       gradientTransform="matrix(-1,0,0,1,1306.0745,-1.53e-6)" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -2097,10 +2128,10 @@
        id="path12-5-8-5-8" />
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 412.44459,370.41666 11.45679,6.61458 240.59268,-138.90625 -11.45681,-6.61458 z"
+       d="m 442.23225,353.21874 11.45679,6.61458 h 9.16544 l 11.45679,-6.61458 v -5.29167 L 648.45454,247.38541 h 9.16544 l 11.45679,-6.61458 v -5.29167 l -11.45679,-6.61458 h -9.16544 l -11.45679,6.61458 v 5.29167 L 462.85448,341.31249 h -9.16544 l -11.45679,6.61458 z"
        id="path3"
-       sodipodi:nodetypes="ccccc"
-       inkscape:export-filename="..\arena_1\connection_1.png"
+       sodipodi:nodetypes="ccccccccccccccccc"
+       inkscape:export-filename="../arena_1/connection_1.png"
        inkscape:export-xdpi="28.799999"
        inkscape:export-ydpi="28.799999" />
     <path
@@ -2138,5 +2169,45 @@
        d="m -146.64696,547.68748 v -5.29165 l 9.16543,-5.29168 -4.58271,7.95989 z"
        id="path22"
        sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#bbbbbb;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round"
+       d="m 458.27176,343.95832 11.4568,6.61459 -11.4568,6.61458 z"
+       id="path1"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#e2e2e2;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round"
+       d="m 458.27177,343.95833 -11.4568,6.61458 11.45679,6.61458 z"
+       id="path4"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#bbbbbb;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round"
+       d="m 653.03726,231.51042 11.4568,6.61457 -11.4568,6.61459 z"
+       id="path1-3"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:#e2e2e2;fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round"
+       d="m 653.03726,231.51041 -11.45679,6.61458 11.45679,6.61459 z"
+       id="path4-5"
+       sodipodi:nodetypes="cccc" />
+    <g
+       id="g11"
+       transform="translate(428.48411,29.104169)"
+       inkscape:export-filename="../port/port.png"
+       inkscape:export-xdpi="28.799999"
+       inkscape:export-ydpi="28.799999">
+      <path
+         style="fill:url(#linearGradient9);fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round"
+         d="m 648.45453,248.70832 v -13.22916 l 11.4568,6.61458 z"
+         id="path8"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:url(#linearGradient10);fill-opacity:1;stroke:none;stroke-width:1;stroke-linejoin:round"
+         d="m 648.45453,248.70832 0,-13.22916 -11.45679,6.61458 z"
+         id="path8-0"
+         sodipodi:nodetypes="cccc"
+         inkscape:export-filename="../port/port.png"
+         inkscape:export-xdpi="28.799999"
+         inkscape:export-ydpi="28.799999" />
+    </g>
   </g>
 </svg>
