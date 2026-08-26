@@ -59,6 +59,10 @@ func sink() -> Server:
 		
 func try_spawn_package():
 	var source = source()
+	
+	if source.lockdown || sink().lockdown:
+		return
+	
 	if source.power >= 1.0:
 		var consume = floor(min(source.power, max_package_size))
 		source.power -= consume
