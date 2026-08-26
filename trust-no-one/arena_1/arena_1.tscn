@@ -7,7 +7,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_xj7g1"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 272, -157)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220, -129)
 }
 point_count = 2
 
@@ -24,15 +24,19 @@ point_b = NodePath("../server 3")
 max_package_size = 2
 
 [node name="Sprite2D" parent="Connection" index="0" unique_id=343096505]
+position = Vector2(14, -9)
 scale = Vector2(1, 1.01)
 texture = ExtResource("3_4gwnt")
 
-[node name="CollisionPolygon2D" parent="Connection" index="1" unique_id=843554145]
-polygon = PackedVector2Array(-144, 75, 129, -84, 146, -76, -129, 85)
-
-[node name="PathAtoB" parent="Connection" index="2" unique_id=860685861]
-position = Vector2(-135, 77)
+[node name="PathAtoB" parent="Connection" index="1" unique_id=860685861]
+position = Vector2(-96, 56)
 curve = SubResource("Curve2D_xj7g1")
+
+[node name="PortA" parent="Connection" index="2" unique_id=954255240]
+position = Vector2(-97, 56)
+
+[node name="PortB" parent="Connection" index="3" unique_id=706148699]
+position = Vector2(124, -74)
 
 [node name="server 1" parent="." unique_id=1404967565 instance=ExtResource("4_bdtki")]
 position = Vector2(415, 409)

@@ -17,6 +17,8 @@ extends Node2D
 		
 @export var player_owned: bool = false
 
+var ports: Array[Port] = []
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -27,6 +29,9 @@ func _process(delta):
 		return
 	power += growth * delta
 	
+func add_port(port: Port):
+	self.ports.append(port)
+	
 func recv_package(package: Package):
 	if package.color == self.color:
 		self.power += package.power
@@ -36,3 +41,5 @@ func recv_package(package: Package):
 			self.power = -self.power
 			self.color = package.color
 			self.player_owned = package.player_owned
+			for port in self.ports:
+				port.online = false

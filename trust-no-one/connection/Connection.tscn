@@ -1,16 +1,20 @@
 [gd_scene format=3 uid="uid://djhky8qb4vngw"]
 
 [ext_resource type="Script" uid="uid://bdii5u6gqdetr" path="res://connection/Connection.gd" id="1_ff2sp"]
+[ext_resource type="PackedScene" uid="uid://bpvn1i2hiycx4" path="res://port/Port.tscn" id="3_7g0st"]
 
 [sub_resource type="Curve2D" id="Curve2D_ff2sp"]
 
-[node name="Connection" type="Area2D" unique_id=202580876]
+[node name="Connection" type="Node2D" unique_id=1579168215]
 script = ExtResource("1_ff2sp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=343096505]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=843554145]
-polygon = PackedVector2Array(7, -10, 33, -4, 44, 21, 5, 32)
-
 [node name="PathAtoB" type="Path2D" parent="." unique_id=860685861]
 curve = SubResource("Curve2D_ff2sp")
+
+[node name="PortA" parent="." unique_id=954255240 instance=ExtResource("3_7g0st")]
+online = false
+
+[node name="PortB" parent="." unique_id=706148699 instance=ExtResource("3_7g0st")]
+online = false

@@ -11,6 +11,7 @@
     pkgs.nixfmt-tree
     pkgs.treefmt
     pkgs.godot
+    pkgs.inkscape
   ];
 
   env = {
