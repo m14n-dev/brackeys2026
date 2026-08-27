@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dovf0uuhggboa"]
+
+[ext_resource type="Texture2D" uid="uid://c61ppuggqxtnq" path="res://arena/background.png" id="1_2sj4i"]
+[ext_resource type="Script" uid="uid://dwyh0vky1b4nv" path="res://arena/Arena.gd" id="1_7pan0"]
+[ext_resource type="Texture2D" uid="uid://dr45eq0a1pc8u" path="res://arena/pattern_a.png" id="2_dk78b"]
+[ext_resource type="Script" uid="uid://dmmqo5xf7jhou" path="res://arena/PatternAnim.gd" id="2_em8bs"]
+[ext_resource type="Texture2D" uid="uid://dpgd4ppinafu2" path="res://arena/pattern_b.png" id="3_gnra2"]
+
+[node name="Arena" type="Node2D" unique_id=109013526]
+script = ExtResource("1_7pan0")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=848387431]
+position = Vector2(576, 324)
+texture = ExtResource("1_2sj4i")
+
+[node name="PatternAnimator" type="Node2D" parent="Background" unique_id=1363256741]
+script = ExtResource("2_em8bs")
+
+[node name="PatternB" type="Sprite2D" parent="Background/PatternAnimator" unique_id=958527814]
+position = Vector2(253, 318)
+texture = ExtResource("3_gnra2")
+
+[node name="PatternA" type="Sprite2D" parent="Background" unique_id=372456302]
+texture = ExtResource("2_dk78b")
+
+[node name="GameOverLabel" type="Label" parent="." unique_id=1223070455]
+visible = false
+z_index = 1000
+offset_left = 15.0
+offset_top = 17.0
+offset_right = 852.0
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(0.65, 0.143, 0.143, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "[>] ERROR: 
+NO RESPONSE
+FROM [::1] 
+FOR 0 SECONDS"
+
+[node name="GameWonLabel" type="Label" parent="." unique_id=1005786992]
+visible = false
+z_index = 1000
+offset_left = 15.0
+offset_top = 17.0
+offset_right = 852.0
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(0.59084994, 0.65, 0.143, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "SCAN COMPLETE
+
+NO PROCESSES
+REMAIN
+"

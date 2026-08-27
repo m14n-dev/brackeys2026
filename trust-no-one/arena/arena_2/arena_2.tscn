@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://chkhsfigpcb2c"]
 
-[ext_resource type="Texture2D" uid="uid://b2j2kpyfmw8em" path="res://arena_2/arena_2.png" id="1_rge3m"]
-[ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="2_civo4"]
-[ext_resource type="PackedScene" uid="uid://djhky8qb4vngw" path="res://connection/Connection.tscn" id="3_gmqf0"]
-[ext_resource type="Texture2D" uid="uid://cs0n45qvyq32h" path="res://arena_2/connection_1_to_2.png" id="4_agy5j"]
-[ext_resource type="Texture2D" uid="uid://cn6mb8s5tqrae" path="res://arena_2/connection_1_to_3.png" id="5_bmjv0"]
-[ext_resource type="Texture2D" uid="uid://bafxjfvvr7o2a" path="res://arena_2/connection_2_to_3.png" id="6_e3ww1"]
-[ext_resource type="PackedScene" uid="uid://dx27omxdqacou" path="res://special_powers/lockdown/lockdown_power.tscn" id="7_w4y6r"]
+[ext_resource type="PackedScene" uid="uid://dovf0uuhggboa" path="res://arena/Arena.tscn" id="1_0s4dw"]
+[ext_resource type="PackedScene" uid="uid://djhky8qb4vngw" path="res://connection/Connection.tscn" id="2_0tuoo"]
+[ext_resource type="Texture2D" uid="uid://cs0n45qvyq32h" path="res://arena/arena_2/connection_1_to_2.png" id="3_tfyns"]
+[ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="4_ml4ye"]
+[ext_resource type="Texture2D" uid="uid://cn6mb8s5tqrae" path="res://arena/arena_2/connection_1_to_3.png" id="5_hpm1i"]
+[ext_resource type="Texture2D" uid="uid://bafxjfvvr7o2a" path="res://arena/arena_2/connection_2_to_3.png" id="6_c3cjk"]
+[ext_resource type="PackedScene" uid="uid://dx27omxdqacou" path="res://special_powers/lockdown/lockdown_power.tscn" id="7_dv023"]
+[ext_resource type="Script" uid="uid://b2nvw43nnbirl" path="res://arena/Faction.gd" id="8_0tuoo"]
+[ext_resource type="Script" uid="uid://bog5gmtmfmy4p" path="res://ai/EnemyAi.gd" id="9_tfyns"]
 
 [sub_resource type="Curve2D" id="Curve2D_agy5j"]
 _data = {
@@ -28,18 +30,16 @@ point_count = 4
 
 [node name="Arena2" type="Node2D" unique_id=428041530]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1189035911]
-position = Vector2(576, 324)
-texture = ExtResource("1_rge3m")
+[node name="Arena" parent="." unique_id=109013526 instance=ExtResource("1_0s4dw")]
 
-[node name="conn_1_to_2" parent="." unique_id=202580876 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("3_gmqf0")]
+[node name="conn_1_to_2" parent="." unique_id=202580876 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("2_0tuoo")]
 point_a = NodePath("../server1")
 point_b = NodePath("../server2")
 max_package_size = 5
 
 [node name="Sprite2D" parent="conn_1_to_2" index="0" unique_id=343096505]
 position = Vector2(597, 227)
-texture = ExtResource("4_agy5j")
+texture = ExtResource("3_tfyns")
 
 [node name="PathAtoB" parent="conn_1_to_2" index="1" unique_id=860685861]
 position = Vector2(415, 202)
@@ -51,24 +51,22 @@ position = Vector2(415, 202)
 [node name="PortB" parent="conn_1_to_2" index="3" unique_id=706148699]
 position = Vector2(779, 202)
 
-[node name="server1" parent="." unique_id=1404967565 instance=ExtResource("2_civo4")]
+[node name="server1" parent="." unique_id=1404967565 instance=ExtResource("4_ml4ye")]
 position = Vector2(338, 121)
-color = Color(0.36506572, 0.75844383, 0.49731195, 1)
-player_owned = true
 
-[node name="server2" parent="." unique_id=172511505 instance=ExtResource("2_civo4")]
+[node name="server2" parent="." unique_id=172511505 instance=ExtResource("4_ml4ye")]
 position = Vector2(857, 121)
 growth = 1.5
-color = Color(0.39, 1, 0.9491666, 1)
+faction_id = 1
 
-[node name="conn_1_to_3" parent="." unique_id=70217481 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("3_gmqf0")]
+[node name="conn_1_to_3" parent="." unique_id=70217481 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("2_0tuoo")]
 point_a = NodePath("../server1")
 point_b = NodePath("../server3")
 max_package_size = 5
 
 [node name="Sprite2D" parent="conn_1_to_3" index="0" unique_id=343096505]
 position = Vector2(578, 341)
-texture = ExtResource("5_bmjv0")
+texture = ExtResource("5_hpm1i")
 
 [node name="PathAtoB" parent="conn_1_to_3" index="1" unique_id=860685861]
 position = Vector2(390, 218)
@@ -80,14 +78,14 @@ position = Vector2(389, 217)
 [node name="PortB" parent="conn_1_to_3" index="3" unique_id=706148699]
 position = Vector2(766, 465)
 
-[node name="conn_2_to_3" parent="." unique_id=1938539089 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("3_gmqf0")]
+[node name="conn_2_to_3" parent="." unique_id=1938539089 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("2_0tuoo")]
 point_a = NodePath("../server2")
 point_b = NodePath("../server3")
 max_package_size = 2
 
 [node name="Sprite2D" parent="conn_2_to_3" index="0" unique_id=343096505]
 position = Vector2(763, 326)
-texture = ExtResource("6_e3ww1")
+texture = ExtResource("6_c3cjk")
 
 [node name="PathAtoB" parent="conn_2_to_3" index="1" unique_id=860685861]
 position = Vector2(806, 218)
@@ -99,12 +97,28 @@ position = Vector2(806, 217)
 [node name="PortB" parent="conn_2_to_3" index="3" unique_id=706148699]
 position = Vector2(767, 435)
 
-[node name="server3" parent="." unique_id=2014041129 instance=ExtResource("2_civo4")]
+[node name="server3" parent="." unique_id=2014041129 instance=ExtResource("4_ml4ye")]
 position = Vector2(857, 451)
 growth = 1.5
-color = Color(0.9595035, 0.8219891, 0.6009722, 1)
+faction_id = 2
 
-[node name="BasePower" parent="." unique_id=1298012714 instance=ExtResource("7_w4y6r")]
+[node name="BasePower" parent="." unique_id=1298012714 instance=ExtResource("7_dv023")]
+
+[node name="Player" type="Node2D" parent="." unique_id=968974591]
+script = ExtResource("8_0tuoo")
+color = Color(0.2429167, 0.53, 0.1855, 1)
+
+[node name="Enemy1" type="Node2D" parent="." unique_id=1347882903]
+position = Vector2(857, 451)
+script = ExtResource("9_tfyns")
+id = 1
+color = Color(0.53, 0.1855, 0.1855, 1)
+
+[node name="Enemy2" type="Node2D" parent="." unique_id=82724317]
+position = Vector2(1714, 902)
+script = ExtResource("9_tfyns")
+id = 2
+color = Color(0.029645847, 0.53424305, 0.3876465, 1)
 
 [editable path="conn_1_to_2"]
 [editable path="conn_1_to_3"]

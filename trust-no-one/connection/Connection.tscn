@@ -14,7 +14,5 @@ script = ExtResource("1_ff2sp")
 curve = SubResource("Curve2D_ff2sp")
 
 [node name="PortA" parent="." unique_id=954255240 instance=ExtResource("3_7g0st")]
-online = false
 
 [node name="PortB" parent="." unique_id=706148699 instance=ExtResource("3_7g0st")]
-online = false

@@ -6,6 +6,7 @@ var color: Color = Color.WHITE:
 	set(val):
 		color = val
 		$Sprite2D.modulate = color
+var faction: int = 0
 var speed_px_per_sec: float = 0
 var dest: Server
 var player_owned: bool

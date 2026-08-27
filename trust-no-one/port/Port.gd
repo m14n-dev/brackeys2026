@@ -44,6 +44,7 @@ func try_spawn_package():
 	var package: Package = PackageScene.instantiate()
 	package.power = consume
 	package.color = server.color
+	package.faction = server.faction_id
 	package.speed_px_per_sec = connection.package_speed_px_per_sec
 	package.dest = peer.server
 	package.player_owned = server.player_owned

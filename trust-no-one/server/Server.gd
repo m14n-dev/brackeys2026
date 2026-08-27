@@ -10,12 +10,22 @@ extends Node2D
 		$Label.text = "%.1f" % power
 		
 @export var growth: float = 0
-@export var color: Color = Color.WHITE:
+
+		
+@export var faction_id: int:
+	set(val):
+		faction_id = val
+		update_faction_color()
+
+
+var color: Color = Color.WHITE:
 	set(val):
 		color = val
 		$Sprite.modulate = color
-		
-@export var player_owned: bool = false
+
+var player_owned: bool: 
+	get: 
+		return faction_id == 0
 
 var ports: Array[Port] = []
 @export var click_area: Area2D
@@ -30,9 +40,18 @@ var lockdown_duration: float = 0
 var production_pause: bool = false # Powers can stop production temporarily
 var production_increase: bool = false # Powers can boost production temporarily
 
+func _get_configuration_warnings():
+	var warnings = []
+	if $"../Arena" == null:
+		warnings.append("Server needs an instanced Arena node as a sibling")
+	elif $"../Arena".get_faction_by_id(faction_id) == null:
+		warnings.append("Unknown faction %d" % [faction_id])
+	return warnings
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	click_area.input_event.connect(click_input_event)
+	update_faction_color()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -48,16 +67,27 @@ func _process(delta):
 		if(lockdown_duration <= 0):
 			lockdown = false
 	
+func update_faction_color():
+	var arena = $"../Arena"
+	if (arena == null):
+		return
+	var faction = arena.get_faction_by_id(faction_id)
+	if (faction != null):
+		color = faction.color
+	else:
+		color = Color.BLACK	
+
 func add_port(port: Port):
 	self.ports.append(port)
 	
 func recv_package(package: Package):
-	if package.color == self.color:
+	if package.faction == self.faction_id:
 		self.power += package.power
 	else:
 		self.power -= package.power
 		if self.power < 0:
 			self.power = -self.power
+			self.faction_id = package.faction
 			self.color = package.color
 			self.player_owned = package.player_owned
 			for port in self.ports:

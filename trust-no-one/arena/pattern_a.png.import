@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bafxjfvvr7o2a"
-path="res://.godot/imported/connection_2_to_3.png-ebb137160412482552339a2a28297e57.ctex"
+uid="uid://dr45eq0a1pc8u"
+path="res://.godot/imported/pattern_a.png-5e85de21a42853b3fafc848922e9dc01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://arena_2/connection_2_to_3.png"
-dest_files=["res://.godot/imported/connection_2_to_3.png-ebb137160412482552339a2a28297e57.ctex"]
+source_file="res://arena/pattern_a.png"
+dest_files=["res://.godot/imported/pattern_a.png-5e85de21a42853b3fafc848922e9dc01.ctex"]
 
 [params]
 
