@@ -20,8 +20,13 @@ extends Node2D
 var ports: Array[Port] = []
 @export var click_area: Area2D
 
-var lockdown: bool = false # Powers can lock down servers, preventing them from sending/receiving packages
+var lockdown: bool = false: # Powers can lock down servers, preventing them from sending/receiving packages
+	set(val):
+		lockdown = val
+		lockdown_sprite.visible = val
 var lockdown_duration: float = 0
+@export var lockdown_sprite: Sprite2D
+
 var production_pause: bool = false # Powers can stop production temporarily
 var production_increase: bool = false # Powers can boost production temporarily
 

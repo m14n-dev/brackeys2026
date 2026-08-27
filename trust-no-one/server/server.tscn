@@ -2,17 +2,25 @@
 
 [ext_resource type="Script" uid="uid://d2yrkep0baped" path="res://server/Server.gd" id="1_0wvpq"]
 [ext_resource type="Texture2D" uid="uid://bi6u3ke4g3li6" path="res://server/sprite.png" id="2_u3pyk"]
+[ext_resource type="Texture2D" uid="uid://88qleepphrbr" path="res://special_powers/lockdown/lockdown_sprite.png" id="3_u3pyk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0wvpq"]
 radius = 107.0
 
-[node name="Node2D" type="Node2D" unique_id=1404967565 node_paths=PackedStringArray("click_area")]
+[node name="Node2D" type="Node2D" unique_id=1404967565 node_paths=PackedStringArray("click_area", "lockdown_sprite")]
 script = ExtResource("1_0wvpq")
 growth = 1.0
 click_area = NodePath("Area2D")
+lockdown_sprite = NodePath("Sprite/lockdown_sprite")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=421985702]
 texture = ExtResource("2_u3pyk")
+
+[node name="lockdown_sprite" type="Sprite2D" parent="Sprite" unique_id=2031238830]
+visible = false
+position = Vector2(2.000001, -0.99999976)
+scale = Vector2(0.35199004, 0.35199004)
+texture = ExtResource("3_u3pyk")
 
 [node name="Label" type="Label" parent="." unique_id=1730306154]
 offset_left = -82.0
