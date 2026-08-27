@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 run/max_fps=300
 config/icon="res://icon.svg"
 
+[autoload]
+
+SignalBus="*uid://cy4gmy70qjnwb"
+
 [display]
 
 window/stretch/mode="canvas_items"

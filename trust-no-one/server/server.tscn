@@ -3,10 +3,13 @@
 [ext_resource type="Script" uid="uid://d2yrkep0baped" path="res://server/Server.gd" id="1_0wvpq"]
 [ext_resource type="Texture2D" uid="uid://bi6u3ke4g3li6" path="res://server/sprite.png" id="2_u3pyk"]
 
-[node name="Node2D" type="Node2D" unique_id=1404967565]
+[sub_resource type="CircleShape2D" id="CircleShape2D_0wvpq"]
+radius = 107.0
+
+[node name="Node2D" type="Node2D" unique_id=1404967565 node_paths=PackedStringArray("click_area")]
 script = ExtResource("1_0wvpq")
 growth = 1.0
-player_owned = null
+click_area = NodePath("Area2D")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=421985702]
 texture = ExtResource("2_u3pyk")
@@ -20,3 +23,8 @@ theme_override_font_sizes/font_size = 32
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1368191814]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=834695774]
+shape = SubResource("CircleShape2D_0wvpq")

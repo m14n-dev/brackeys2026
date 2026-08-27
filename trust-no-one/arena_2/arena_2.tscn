@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cs0n45qvyq32h" path="res://arena_2/connection_1_to_2.png" id="4_agy5j"]
 [ext_resource type="Texture2D" uid="uid://cn6mb8s5tqrae" path="res://arena_2/connection_1_to_3.png" id="5_bmjv0"]
 [ext_resource type="Texture2D" uid="uid://bafxjfvvr7o2a" path="res://arena_2/connection_2_to_3.png" id="6_e3ww1"]
+[ext_resource type="PackedScene" uid="uid://dx27omxdqacou" path="res://special_powers/lockdown/lockdown_power.tscn" id="7_w4y6r"]
 
 [sub_resource type="Curve2D" id="Curve2D_agy5j"]
 _data = {
@@ -59,7 +60,6 @@ player_owned = true
 position = Vector2(857, 121)
 growth = 1.5
 color = Color(0.39, 1, 0.9491666, 1)
-player_owned = false
 
 [node name="conn_1_to_3" parent="." unique_id=70217481 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("3_gmqf0")]
 point_a = NodePath("../server1")
@@ -103,7 +103,8 @@ position = Vector2(767, 435)
 position = Vector2(857, 451)
 growth = 1.5
 color = Color(0.9595035, 0.8219891, 0.6009722, 1)
-player_owned = false
+
+[node name="BasePower" parent="." unique_id=1298012714 instance=ExtResource("7_w4y6r")]
 
 [editable path="conn_1_to_2"]
 [editable path="conn_1_to_3"]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dx27omxdqacou"]
+
+[ext_resource type="PackedScene" uid="uid://3eoc1tuth378" path="res://special_powers/base_power.tscn" id="1_7bmbd"]
+[ext_resource type="Script" uid="uid://dcxgh5h7gu287" path="res://special_powers/lockdown/lockdown_power.gd" id="2_tw6bb"]
+
+[node name="BasePower" unique_id=1298012714 node_paths=PackedStringArray("button") instance=ExtResource("1_7bmbd")]
+script = ExtResource("2_tw6bb")
+button = NodePath("Button")
+
+[node name="Button" parent="." index="0" unique_id=410051357]
+offset_right = 161.0
+offset_bottom = 82.0
+text = "Lockdown"

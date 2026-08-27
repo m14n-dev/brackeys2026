@@ -18,14 +18,16 @@ extends Node2D
 @export var player_owned: bool = false
 
 var ports: Array[Port] = []
+@export var click_area: Area2D
 
 var lockdown: bool = false # Powers can lock down servers, preventing them from sending/receiving packages
+var lockdown_duration: float = 0
 var production_pause: bool = false # Powers can stop production temporarily
 var production_increase: bool = false # Powers can boost production temporarily
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	click_area.input_event.connect(click_input_event)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -35,6 +37,11 @@ func _process(delta):
 	if !production_pause:
 		var production_multiplier: float = 2 if production_increase else 1
 		power += growth * production_multiplier * delta
+	
+	if(lockdown):
+		lockdown_duration -= delta
+		if(lockdown_duration <= 0):
+			lockdown = false
 	
 func add_port(port: Port):
 	self.ports.append(port)
@@ -50,3 +57,9 @@ func recv_package(package: Package):
 			self.player_owned = package.player_owned
 			for port in self.ports:
 				port.online = false
+
+func click_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		event = event as InputEventMouseButton 
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			SignalBus.server_clicked.emit(self)
