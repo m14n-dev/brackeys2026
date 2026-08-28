@@ -3,6 +3,7 @@
 class_name Server
 extends Node2D
 
+signal on_package_recv(Server, Package)
 
 @export var power: float = 0:
 	set(val):
@@ -14,6 +15,8 @@ extends Node2D
 		
 @export var faction_id: int:
 	set(val):
+		remove_from_group("server_%d" % [faction_id])
+		add_to_group("server_%d" % [val])
 		faction_id = val
 		update_faction_color()
 
@@ -50,7 +53,12 @@ func _get_configuration_warnings():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_tree().current_scene.ready.connect(on_scene_ready)
 	click_area.input_event.connect(click_input_event)
+	add_to_group("server")
+	add_to_group("server_%d" % [faction_id])
+	
+func on_scene_ready():
 	update_faction_color()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -81,6 +89,8 @@ func add_port(port: Port):
 	self.ports.append(port)
 	
 func recv_package(package: Package):
+	on_package_recv.emit(self, package)
+	
 	if package.faction == self.faction_id:
 		self.power += package.power
 	else:

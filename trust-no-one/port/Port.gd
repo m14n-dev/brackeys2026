@@ -20,7 +20,7 @@ var time_since_last: float = 0
 
 func _ready() -> void:
 	$Sprite2D.visible = online
-	pass
+	add_to_group("port")
 	
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:

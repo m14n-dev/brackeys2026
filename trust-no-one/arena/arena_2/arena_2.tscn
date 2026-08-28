@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dx27omxdqacou" path="res://special_powers/lockdown/lockdown_power.tscn" id="7_dv023"]
 [ext_resource type="Script" uid="uid://b2nvw43nnbirl" path="res://arena/Faction.gd" id="8_0tuoo"]
 [ext_resource type="Script" uid="uid://bog5gmtmfmy4p" path="res://ai/EnemyAi.gd" id="9_tfyns"]
+[ext_resource type="Script" uid="uid://3yvav4q5ks4v" path="res://ai/RetributionAiBehavior.gd" id="10_ml4ye"]
 
 [sub_resource type="Curve2D" id="Curve2D_agy5j"]
 _data = {
@@ -27,6 +28,14 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, -1, 0, 0, 0, 0, -98, 56, 0, 0, 0, 0, -98, 183, 0, 0, 0, 0, -39, 217)
 }
 point_count = 4
+
+[sub_resource type="Resource" id="Resource_tfyns"]
+script = ExtResource("10_ml4ye")
+metadata/_custom_type_script = "uid://3yvav4q5ks4v"
+
+[sub_resource type="Resource" id="Resource_hpm1i"]
+script = ExtResource("10_ml4ye")
+metadata/_custom_type_script = "uid://3yvav4q5ks4v"
 
 [node name="Arena2" type="Node2D" unique_id=428041530]
 
@@ -56,7 +65,7 @@ position = Vector2(338, 121)
 
 [node name="server2" parent="." unique_id=172511505 instance=ExtResource("4_ml4ye")]
 position = Vector2(857, 121)
-growth = 1.5
+growth = 2.5
 faction_id = 1
 
 [node name="conn_1_to_3" parent="." unique_id=70217481 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("2_0tuoo")]
@@ -99,7 +108,7 @@ position = Vector2(767, 435)
 
 [node name="server3" parent="." unique_id=2014041129 instance=ExtResource("4_ml4ye")]
 position = Vector2(857, 451)
-growth = 1.5
+growth = 2.5
 faction_id = 2
 
 [node name="BasePower" parent="." unique_id=1298012714 instance=ExtResource("7_dv023")]
@@ -111,12 +120,14 @@ color = Color(0.2429167, 0.53, 0.1855, 1)
 [node name="Enemy1" type="Node2D" parent="." unique_id=1347882903]
 position = Vector2(857, 451)
 script = ExtResource("9_tfyns")
+behavior = SubResource("Resource_tfyns")
 id = 1
 color = Color(0.53, 0.1855, 0.1855, 1)
 
 [node name="Enemy2" type="Node2D" parent="." unique_id=82724317]
 position = Vector2(1714, 902)
 script = ExtResource("9_tfyns")
+behavior = SubResource("Resource_hpm1i")
 id = 2
 color = Color(0.029645847, 0.53424305, 0.3876465, 1)
 

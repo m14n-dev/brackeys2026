@@ -6,12 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="4_kywog"]
 [ext_resource type="Script" uid="uid://b2nvw43nnbirl" path="res://arena/Faction.gd" id="5_rlj3j"]
 [ext_resource type="Script" uid="uid://bog5gmtmfmy4p" path="res://ai/EnemyAi.gd" id="6_jnkxs"]
+[ext_resource type="Script" uid="uid://ca3rj0thvcik6" path="res://ai/AiBehavior.gd" id="7_kywog"]
 
 [sub_resource type="Curve2D" id="Curve2D_xj7g1"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220, -129)
 }
 point_count = 2
+
+[sub_resource type="Resource" id="Resource_jnkxs"]
+script = ExtResource("7_kywog")
+metadata/_custom_type_script = "uid://ca3rj0thvcik6"
 
 [node name="Arena1" type="Node2D" unique_id=52630319]
 
@@ -56,6 +61,7 @@ color = Color(0.2429167, 0.53, 0.1855, 1)
 [node name="Enemy" type="Node2D" parent="." unique_id=924096706]
 position = Vector2(415, 409)
 script = ExtResource("6_jnkxs")
+behavior = SubResource("Resource_jnkxs")
 id = 1
 color = Color(0.53, 0.1855, 0.1855, 1)
 
