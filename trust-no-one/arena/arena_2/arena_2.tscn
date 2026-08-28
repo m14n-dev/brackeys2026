@@ -115,21 +115,21 @@ faction_id = 2
 
 [node name="Player" type="Node2D" parent="." unique_id=968974591]
 script = ExtResource("8_0tuoo")
-color = Color(0.2429167, 0.53, 0.1855, 1)
+color = Color(0.5244, 0.76, 0.52832663, 1)
 
 [node name="Enemy1" type="Node2D" parent="." unique_id=1347882903]
 position = Vector2(857, 451)
 script = ExtResource("9_tfyns")
 behavior = SubResource("Resource_tfyns")
 id = 1
-color = Color(0.53, 0.1855, 0.1855, 1)
+color = Color(0.5394, 0.75429004, 0.87, 1)
 
 [node name="Enemy2" type="Node2D" parent="." unique_id=82724317]
 position = Vector2(1714, 902)
 script = ExtResource("9_tfyns")
 behavior = SubResource("Resource_hpm1i")
 id = 2
-color = Color(0.029645847, 0.53424305, 0.3876465, 1)
+color = Color(0.78, 0.5395, 0.49139997, 1)
 
 [editable path="conn_1_to_2"]
 [editable path="conn_1_to_3"]

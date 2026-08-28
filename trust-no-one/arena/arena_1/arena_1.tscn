@@ -56,13 +56,13 @@ faction_id = 1
 
 [node name="Player" type="Node2D" parent="." unique_id=1370228617]
 script = ExtResource("5_rlj3j")
-color = Color(0.2429167, 0.53, 0.1855, 1)
+color = Color(0.5, 0.75, 0.45000002, 1)
 
 [node name="Enemy" type="Node2D" parent="." unique_id=924096706]
 position = Vector2(415, 409)
 script = ExtResource("6_jnkxs")
 behavior = SubResource("Resource_jnkxs")
 id = 1
-color = Color(0.53, 0.1855, 0.1855, 1)
+color = Color(0.77, 0.48509997, 0.5135899, 1)
 
 [editable path="Connection"]
