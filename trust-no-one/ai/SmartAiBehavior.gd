@@ -126,24 +126,18 @@ func get_active_ports() -> Array[Port]:
 	var assignments: Dictionary[Server, bool] = {}
 	var ports: Array[Port] = []
 	
-	print("----- ", faction.id, " -----")
 	var under_attack = servers_under_attack()
 	for server in under_attack:
-		print("Server under attack: ", server)
 		var node_tree = build_node_tree(server, under_attack[server], assignments)
 		if node_tree.capacity >= under_attack[server]:
 			assignments.merge(node_tree.assigned_servers)
 			ports.append_array(node_tree.ports)
 			
 	for server in ranked_enemy_servers():
-		print("Targetting server: ", server)
 		var target_cap = get_capacity_of_server(server) + 1
 		var node_tree = build_node_tree(server, target_cap, assignments)
 		if node_tree.capacity >= target_cap:
-			print("Target capacity ", target_cap, " reached with ", node_tree.assigned_servers)
 			assignments.merge(node_tree.assigned_servers)
 			ports.append_array(node_tree.ports)
-		else:
-			print("Target capacity not reached")
 	
 	return ports
