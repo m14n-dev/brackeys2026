@@ -186,22 +186,22 @@ point_a = NodePath("../EnemyServer2")
 point_b = NodePath("../EnemyServer3")
 max_package_size = 5
 
-[node name="PausePower" parent="Connection2to3" unique_id=1298012714 instance=ExtResource("11_xlnui")]
-position = Vector2(0, 489)
-
-[node name="Sprite2D" parent="Connection2to3" index="1" unique_id=343096505]
+[node name="Sprite2D" parent="Connection2to3" index="0" unique_id=343096505]
 position = Vector2(800, 387)
 texture = ExtResource("11_0ta2s")
 
-[node name="PathAtoB" parent="Connection2to3" index="2" unique_id=860685861]
+[node name="PathAtoB" parent="Connection2to3" index="1" unique_id=860685861]
 position = Vector2(766, 360)
 curve = SubResource("Curve2D_vuf4c")
 
-[node name="PortA" parent="Connection2to3" index="3" unique_id=954255240]
+[node name="PortA" parent="Connection2to3" index="2" unique_id=954255240]
 position = Vector2(766, 360)
 
-[node name="PortB" parent="Connection2to3" index="4" unique_id=706148699]
+[node name="PortB" parent="Connection2to3" index="3" unique_id=706148699]
 position = Vector2(844, 405)
+
+[node name="PausePower" parent="Connection2to3" unique_id=1298012714 instance=ExtResource("11_xlnui")]
+position = Vector2(0, 489)
 
 [node name="DisguisePower" parent="." unique_id=1549762775 instance=ExtResource("12_08hm1")]
 position = Vector2(0, 576)
