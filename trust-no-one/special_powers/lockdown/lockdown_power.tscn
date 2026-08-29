@@ -7,6 +7,8 @@
 
 [node name="LockdownPower" unique_id=1298012714 instance=ExtResource("1_7bmbd")]
 script = ExtResource("2_tw6bb")
+duration = 7.0
+cooldown = 7.0
 select_audio = ExtResource("3_3f1rc")
 unselect_audio = ExtResource("4_rdn1d")
 

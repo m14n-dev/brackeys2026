@@ -1,0 +1,213 @@
+[gd_scene format=3 uid="uid://bt6mdken2jqer"]
+
+[ext_resource type="PackedScene" uid="uid://dovf0uuhggboa" path="res://arena/Arena.tscn" id="1_dey2x"]
+[ext_resource type="Script" uid="uid://b2nvw43nnbirl" path="res://arena/Faction.gd" id="2_b22ik"]
+[ext_resource type="Script" uid="uid://bog5gmtmfmy4p" path="res://ai/EnemyAi.gd" id="3_e61td"]
+[ext_resource type="Script" uid="uid://3yvav4q5ks4v" path="res://ai/RetributionAiBehavior.gd" id="4_08hm1"]
+[ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="5_nyy6c"]
+[ext_resource type="PackedScene" uid="uid://djhky8qb4vngw" path="res://connection/Connection.tscn" id="6_rawk7"]
+[ext_resource type="Texture2D" uid="uid://bv8aaltutmwlk" path="res://arena/arena_5/connection_1.png" id="7_5mlmt"]
+[ext_resource type="Texture2D" uid="uid://42r4wmgameh4" path="res://arena/arena_5/connection_4.png" id="8_ghor0"]
+[ext_resource type="Texture2D" uid="uid://dhulldigc0u18" path="res://arena/arena_5/connection_5.png" id="9_3wwbs"]
+[ext_resource type="Texture2D" uid="uid://dinfjitpmgj02" path="res://arena/arena_5/connection_2.png" id="10_tx8b8"]
+[ext_resource type="Texture2D" uid="uid://b2b08l52xrdct" path="res://arena/arena_5/connection_3.png" id="11_0ta2s"]
+[ext_resource type="PackedScene" uid="uid://cqa8idrk6lm2a" path="res://special_powers/pause/pause_power.tscn" id="11_xlnui"]
+[ext_resource type="PackedScene" uid="uid://b3nek1vcj1gw5" path="res://special_powers/disguise/disguise_power.tscn" id="12_08hm1"]
+
+[sub_resource type="Resource" id="Resource_ur0au"]
+script = ExtResource("4_08hm1")
+metadata/_custom_type_script = "uid://3yvav4q5ks4v"
+
+[sub_resource type="Resource" id="Resource_4ihqf"]
+script = ExtResource("4_08hm1")
+metadata/_custom_type_script = "uid://3yvav4q5ks4v"
+
+[sub_resource type="Curve2D" id="Curve2D_ibq3o"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 221, 128)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_084up"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -39, 23, 0, 0, 0, 0, -39, 68)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_hy6km"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -33, 20, 0, 0, 0, 0, -32, 56, 0, 0, 0, 0, 51, 104, 0, 0, 0, 0, 108, 104, 0, 0, 0, 0, 145, 83)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_qa4m7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 16, 0, 0, 0, 0, 77, 16, 0, 0, 0, 0, 104, 0)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_vuf4c"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -20, 12, 0, 0, 0, 0, -20, 33, 0, 0, 0, 0, 23, 59, 0, 0, 0, 0, 56, 59, 0, 0, 0, 0, 78, 45)
+}
+point_count = 6
+
+[node name="Arena3" type="Node2D" unique_id=332965414]
+
+[node name="Arena" parent="." unique_id=109013526 instance=ExtResource("1_dey2x")]
+
+[node name="Player" type="Node2D" parent="." unique_id=1525136805]
+script = ExtResource("2_b22ik")
+color = Color(0.5, 0.75, 0.45000002, 1)
+
+[node name="Enemy1" type="Node2D" parent="." unique_id=1736889985]
+position = Vector2(415, 409)
+script = ExtResource("3_e61td")
+behavior = SubResource("Resource_ur0au")
+id = 1
+color = Color(0.77, 0.48509997, 0.5135899, 1)
+
+[node name="Enemy2" type="Node2D" parent="." unique_id=654150558]
+position = Vector2(415, 409)
+script = ExtResource("3_e61td")
+behavior = SubResource("Resource_4ihqf")
+id = 2
+color = Color(0.5411765, 0.7529412, 0.87058824, 1)
+
+[node name="PlayerServerA" parent="." unique_id=1404967565 instance=ExtResource("5_nyy6c")]
+position = Vector2(156, 97)
+scale = Vector2(0.45, 0.45)
+
+[node name="ConnectionAto1" parent="." unique_id=1579168215 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("6_rawk7")]
+point_a = NodePath("../PlayerServerA")
+point_b = NodePath("../EnemyServer1")
+max_package_size = 5
+
+[node name="Sprite2D" parent="ConnectionAto1" index="0" unique_id=343096505]
+position = Vector2(318, 191)
+texture = ExtResource("7_5mlmt")
+
+[node name="PathAtoB" parent="ConnectionAto1" index="1" unique_id=860685861]
+position = Vector2(208, 127)
+curve = SubResource("Curve2D_ibq3o")
+
+[node name="PortA" parent="ConnectionAto1" index="2" unique_id=954255240]
+position = Vector2(207, 127)
+
+[node name="PortB" parent="ConnectionAto1" index="3" unique_id=706148699]
+position = Vector2(428, 255)
+
+[node name="EnemyServer1" parent="." unique_id=1591144704 instance=ExtResource("5_nyy6c")]
+position = Vector2(521, 309)
+scale = Vector2(0.8, 0.8)
+growth = 4.5
+faction_id = 1
+
+[node name="Connection1to4" parent="." unique_id=971984494 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("6_rawk7")]
+point_a = NodePath("../EnemyServer1")
+point_b = NodePath("../EnemyServer4")
+max_package_size = 5
+
+[node name="Sprite2D" parent="Connection1to4" index="0" unique_id=343096505]
+position = Vector2(435, 379)
+texture = ExtResource("8_ghor0")
+
+[node name="PathAtoB" parent="Connection1to4" index="1" unique_id=860685861]
+position = Vector2(455, 345)
+curve = SubResource("Curve2D_084up")
+
+[node name="PortA" parent="Connection1to4" index="2" unique_id=954255240]
+position = Vector2(455, 345)
+
+[node name="PortB" parent="Connection1to4" index="3" unique_id=706148699]
+position = Vector2(416, 413)
+
+[node name="Connection4to5" parent="." unique_id=1833101336 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("6_rawk7")]
+position = Vector2(-19, -21)
+point_a = NodePath("../EnemyServer4")
+point_b = NodePath("../EnemyServer5")
+max_package_size = 5
+
+[node name="Sprite2D" parent="Connection4to5" index="0" unique_id=343096505]
+position = Vector2(514, 560)
+texture = ExtResource("9_3wwbs")
+
+[node name="PathAtoB" parent="Connection4to5" index="1" unique_id=860685861]
+position = Vector2(453, 510)
+curve = SubResource("Curve2D_hy6km")
+
+[node name="PortA" parent="Connection4to5" index="2" unique_id=954255240]
+position = Vector2(454, 510)
+
+[node name="PortB" parent="Connection4to5" index="3" unique_id=706148699]
+position = Vector2(598, 593)
+
+[node name="EnemyServer2" parent="." unique_id=124066517 instance=ExtResource("5_nyy6c")]
+position = Vector2(795, 318)
+scale = Vector2(0.45, 0.45)
+faction_id = 2
+
+[node name="EnemyServer3" parent="." unique_id=82061437 instance=ExtResource("5_nyy6c")]
+position = Vector2(894.00006, 371)
+scale = Vector2(0.45, 0.45)
+faction_id = 2
+
+[node name="EnemyServer4" parent="." unique_id=1316788121 instance=ExtResource("5_nyy6c")]
+position = Vector2(481, 462.00003)
+scale = Vector2(0.45, 0.45)
+faction_id = 2
+
+[node name="EnemyServer5" parent="." unique_id=1709299274 instance=ExtResource("5_nyy6c")]
+position = Vector2(630, 539.00006)
+scale = Vector2(0.45, 0.45)
+faction_id = 2
+
+[node name="Connection1to2" parent="." unique_id=1289456471 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("6_rawk7")]
+point_a = NodePath("../EnemyServer1")
+point_b = NodePath("../EnemyServer2")
+max_package_size = 5
+
+[node name="Sprite2D" parent="Connection1to2" index="0" unique_id=343096505]
+position = Vector2(676, 343)
+texture = ExtResource("10_tx8b8")
+
+[node name="PathAtoB" parent="Connection1to2" index="1" unique_id=860685861]
+position = Vector2(624, 337)
+curve = SubResource("Curve2D_qa4m7")
+
+[node name="PortA" parent="Connection1to2" index="2" unique_id=954255240]
+position = Vector2(624, 337)
+
+[node name="PortB" parent="Connection1to2" index="3" unique_id=706148699]
+position = Vector2(728, 337)
+
+[node name="Connection2to3" parent="." unique_id=1235955901 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("6_rawk7")]
+point_a = NodePath("../EnemyServer2")
+point_b = NodePath("../EnemyServer3")
+max_package_size = 5
+
+[node name="PausePower" parent="Connection2to3" unique_id=1298012714 instance=ExtResource("11_xlnui")]
+position = Vector2(0, 489)
+
+[node name="Sprite2D" parent="Connection2to3" index="1" unique_id=343096505]
+position = Vector2(800, 387)
+texture = ExtResource("11_0ta2s")
+
+[node name="PathAtoB" parent="Connection2to3" index="2" unique_id=860685861]
+position = Vector2(766, 360)
+curve = SubResource("Curve2D_vuf4c")
+
+[node name="PortA" parent="Connection2to3" index="3" unique_id=954255240]
+position = Vector2(766, 360)
+
+[node name="PortB" parent="Connection2to3" index="4" unique_id=706148699]
+position = Vector2(844, 405)
+
+[node name="DisguisePower" parent="." unique_id=1549762775 instance=ExtResource("12_08hm1")]
+position = Vector2(0, 576)
+
+[editable path="ConnectionAto1"]
+[editable path="Connection1to4"]
+[editable path="Connection4to5"]
+[editable path="Connection1to2"]
+[editable path="Connection2to3"]

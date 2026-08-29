@@ -5,6 +5,8 @@
 
 [node name="PausePower" unique_id=1298012714 instance=ExtResource("1_orkth")]
 script = ExtResource("2_bn8ca")
+duration = 10.0
+cooldown = 25.0
 
 [node name="Label" parent="Button" parent_id_path=PackedInt32Array(1551904567) index="0" unique_id=1380812641]
 text = "STOP"

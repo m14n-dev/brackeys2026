@@ -7,6 +7,7 @@
 
 [node name="DisguisePower" unique_id=1298012714 instance=ExtResource("1_yawc8")]
 script = ExtResource("2_23rik")
+cooldown = 30.0
 select_audio = ExtResource("3_on8x2")
 unselect_audio = ExtResource("4_rrp18")
 
