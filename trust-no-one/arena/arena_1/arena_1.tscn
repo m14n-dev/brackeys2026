@@ -62,7 +62,7 @@ position = Vector2(-97, 56)
 
 [node name="OnboardingSprite" type="AnimatedSprite2D" parent="Connection/PortA" index="3" unique_id=1887443005]
 sprite_frames = SubResource("SpriteFrames_4d4sq")
-frame_progress = 0.245275
+frame_progress = 0.6500569
 
 [node name="PortB" parent="Connection" index="3" unique_id=706148699]
 position = Vector2(124, -74)
@@ -87,7 +87,7 @@ position = Vector2(415, 409)
 script = ExtResource("6_jnkxs")
 behavior = SubResource("Resource_jnkxs")
 id = 1
-color = Color(0.77, 0.48509997, 0.5135899, 1)
+color = Color(1, 1, 1, 1)
 
 [connection signal="clicked" from="Connection/PortA" to="." method="_on_port_a_clicked"]
 
