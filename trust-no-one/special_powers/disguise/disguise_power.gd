@@ -41,3 +41,9 @@ func on_color_selected(color:Color):
 func unselect():
 	super()
 	#TODO: delete swatch if exists
+	
+
+func get_eligible_servers() -> Array[Server]:
+	var res: Array[Server]
+	res.assign(get_tree().get_nodes_in_group("server_0"))
+	return res

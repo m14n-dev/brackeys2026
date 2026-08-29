@@ -4,19 +4,20 @@
 [ext_resource type="AudioStream" uid="uid://bor5d5c000gfn" path="res://package/package_receive.mp3" id="2_gc6nq"]
 [ext_resource type="Texture2D" uid="uid://bi6u3ke4g3li6" path="res://server/sprite.png" id="2_u3pyk"]
 [ext_resource type="AudioStream" uid="uid://cof06hf41u8p8" path="res://server/player_takeover.mp3" id="3_t43u5"]
-[ext_resource type="Texture2D" uid="uid://cmp26bdbo0epo" path="res://special_powers/lockdown/lockdown_sprite.png" id="3_u3pyk"]
 [ext_resource type="AudioStream" uid="uid://bq2y6bwbkti6w" path="res://server/enemy_takeover.mp3" id="4_87v45"]
+[ext_resource type="Texture2D" uid="uid://c8vqfhpo581nm" path="res://server/firewall_front.png" id="6_it51r"]
 [ext_resource type="Texture2D" uid="uid://dhx1gn2bfeipf" path="res://special_powers/boost/boost.png" id="7_87v45"]
+[ext_resource type="Texture2D" uid="uid://cnhy4ofnp36l0" path="res://server/firewall_back.png" id="7_c0gbm"]
 [ext_resource type="Texture2D" uid="uid://kx2xxac4dtoc" path="res://special_powers/pause/pause.png" id="8_it51r"]
+[ext_resource type="Texture2D" uid="uid://pody8woslkm7" path="res://server/selector.png" id="10_qbnly"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0wvpq"]
 radius = 107.0
 
-[node name="Node2D" type="Node2D" unique_id=1404967565 node_paths=PackedStringArray("click_area", "lockdown_sprite", "production_pause_sprite", "production_increase_sprite", "audioPlayer")]
+[node name="Node2D" type="Node2D" unique_id=1404967565 node_paths=PackedStringArray("click_area", "production_pause_sprite", "production_increase_sprite", "audioPlayer")]
 script = ExtResource("1_0wvpq")
 growth = 1.0
 click_area = NodePath("Sprite/Area2D")
-lockdown_sprite = NodePath("Sprite/lockdown_sprite")
 production_pause_sprite = NodePath("Sprite/pause_sprite")
 production_increase_sprite = NodePath("Sprite/boost_sprite")
 audioPlayer = NodePath("AudioStreamPlayer2D")
@@ -28,11 +29,19 @@ enemy_takeover_sound = ExtResource("4_87v45")
 position = Vector2(0, -53)
 texture = ExtResource("2_u3pyk")
 
-[node name="lockdown_sprite" type="Sprite2D" parent="Sprite" unique_id=2031238830]
+[node name="lockdown_sprite" type="Node2D" parent="Sprite" unique_id=1113306854]
 visible = false
-position = Vector2(-73, -37)
-scale = Vector2(0.19199248, 0.19199248)
-texture = ExtResource("3_u3pyk")
+position = Vector2(0, 51)
+
+[node name="back" type="Sprite2D" parent="Sprite/lockdown_sprite" unique_id=103934422]
+z_index = -1
+position = Vector2(0, -99)
+texture = ExtResource("7_c0gbm")
+
+[node name="front" type="Sprite2D" parent="Sprite/lockdown_sprite" unique_id=747899029]
+z_index = 100
+position = Vector2(0, -1)
+texture = ExtResource("6_it51r")
 
 [node name="boost_sprite" type="Sprite2D" parent="Sprite" unique_id=1164573017]
 visible = false
@@ -45,6 +54,11 @@ visible = false
 position = Vector2(-73, 40)
 scale = Vector2(0.061245907, 0.061245907)
 texture = ExtResource("8_it51r")
+
+[node name="selector_sprite" type="Sprite2D" parent="Sprite" unique_id=1699060554]
+visible = false
+z_index = 100
+texture = ExtResource("10_qbnly")
 
 [node name="Area2D" type="Area2D" parent="Sprite" unique_id=1368191814]
 

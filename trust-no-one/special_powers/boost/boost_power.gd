@@ -11,3 +11,8 @@ func on_server_clicked(source: Server):
 		source.production_increase = true
 		source.production_increase_duration = duration
 		unselect()
+
+func get_eligible_servers() -> Array[Server]:
+	var res: Array[Server]
+	res.assign(get_tree().get_nodes_in_group("server"))
+	return res

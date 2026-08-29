@@ -34,7 +34,7 @@ signal on_package_recv(Server, Package)
 var color: Color = Color.WHITE:
 	set(val):
 		color = val
-		$Sprite.modulate = color
+		$Sprite.self_modulate = color
 
 var player_owned: bool: 
 	get: 
@@ -46,9 +46,8 @@ var ports: Array[Port] = []
 var lockdown: bool = false: # Powers can lock down servers, preventing them from sending/receiving packages
 	set(val):
 		lockdown = val
-		lockdown_sprite.visible = val
+		$Sprite/lockdown_sprite.visible = val
 var lockdown_duration: float = 0
-@export var lockdown_sprite: Sprite2D
 
 var production_pause: bool = false: # Powers can stop production temporarily
 	set(val):
