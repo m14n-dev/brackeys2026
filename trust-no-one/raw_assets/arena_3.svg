@@ -28,9 +28,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="0.28594802"
-     inkscape:cx="1738.0781"
-     inkscape:cy="1040.3989"
+     inkscape:zoom="1.6175663"
+     inkscape:cx="1770.5611"
+     inkscape:cy="1864.8386"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -197,36 +197,37 @@
          d="m 400.98778,310.88541 v -13.22916 l 11.45681,6.61458 z"
          id="path7-0-6" />
     </g>
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 405.57051,440.53122 11.4568,6.61459 v 5.29166 l -11.4568,6.61459 h -9.16543 l -11.4568,-6.61459 v -5.29166 l 11.4568,-6.61459 z"
+       id="path5-6-09" />
     <g
-       id="g7-8-42"
-       transform="translate(7.1036421e-6,145.52081)">
-      <path
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 405.5705,295.01041 11.4568,6.61459 v 5.29166 l -11.4568,6.61459 h -9.16543 l -11.4568,-6.61459 V 301.625 l 11.4568,-6.61459 z"
-         id="path5-6-09" />
+       id="g12">
       <path
          style="fill:#e2e2e2;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 389.53098,304.27083 11.4568,6.61458 v -13.22916 z"
+         d="m 389.53099,449.79164 11.4568,6.61458 v -13.22916 z"
          id="path6-5-73" />
       <path
          style="fill:#bbbbbb;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 400.98778,310.88541 v -13.22916 l 11.45681,6.61458 z"
+         d="m 400.98779,456.40622 v -13.22916 l 11.45681,6.61458 z"
          id="path7-0-7" />
     </g>
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 531.59524,513.29164 11.4568,6.61459 v 5.29166 l -11.4568,6.61459 h -9.16543 l -11.4568,-6.61459 v -5.29166 l 11.4568,-6.61459 z"
+       id="path5-6-5"
+       inkscape:export-filename="..\arena\arena_3\connection_5.png"
+       inkscape:export-xdpi="28.799999"
+       inkscape:export-ydpi="28.799999" />
     <g
-       id="g7-8-6"
-       transform="translate(126.02474,218.28123)">
-      <path
-         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 405.5705,295.01041 11.4568,6.61459 v 5.29166 l -11.4568,6.61459 h -9.16543 l -11.4568,-6.61459 V 301.625 l 11.4568,-6.61459 z"
-         id="path5-6-5" />
+       id="g11">
       <path
          style="fill:#e2e2e2;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 389.53098,304.27083 11.4568,6.61458 v -13.22916 z"
+         d="m 515.55572,522.55206 11.4568,6.61458 v -13.22916 z"
          id="path6-5-75" />
       <path
          style="fill:#bbbbbb;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 400.98778,310.88541 v -13.22916 l 11.45681,6.61458 z"
+         d="m 527.01252,529.16664 v -13.22916 l 11.45681,6.61458 z"
          id="path7-0-4" />
     </g>
     <g
