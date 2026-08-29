@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dcmcxvn674xqp"]
+
+[ext_resource type="PackedScene" uid="uid://3eoc1tuth378" path="res://special_powers/base_power.tscn" id="1_wdkdg"]
+[ext_resource type="Script" uid="uid://17eivslval1b" path="res://special_powers/boost/boost_power.gd" id="2_h8u63"]
+[ext_resource type="AudioStream" uid="uid://d23twgeya4hnu" path="res://special_powers/power_select.mp3" id="3_xgwis"]
+[ext_resource type="AudioStream" uid="uid://dp1tyvhr4qr04" path="res://special_powers/power_unselect.mp3" id="4_tr7gh"]
+
+[node name="BoostPower" unique_id=1298012714 instance=ExtResource("1_wdkdg")]
+script = ExtResource("2_h8u63")
+duration = 8.0
+cooldown = 16.0
+select_audio = ExtResource("3_xgwis")
+unselect_audio = ExtResource("4_tr7gh")
+
+[node name="Button" parent="." index="0" unique_id=410051357]
+text = "Boost"

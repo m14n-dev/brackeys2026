@@ -6,15 +6,17 @@
 [ext_resource type="AudioStream" uid="uid://cof06hf41u8p8" path="res://server/player_takeover.mp3" id="3_t43u5"]
 [ext_resource type="Texture2D" uid="uid://88qleepphrbr" path="res://special_powers/lockdown/lockdown_sprite.png" id="3_u3pyk"]
 [ext_resource type="AudioStream" uid="uid://bq2y6bwbkti6w" path="res://server/enemy_takeover.mp3" id="4_87v45"]
+[ext_resource type="Texture2D" uid="uid://dhx1gn2bfeipf" path="res://special_powers/boost/boost.png" id="7_87v45"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0wvpq"]
 radius = 107.0
 
-[node name="Node2D" type="Node2D" unique_id=1404967565 node_paths=PackedStringArray("click_area", "lockdown_sprite", "audioPlayer")]
+[node name="Node2D" type="Node2D" unique_id=1404967565 node_paths=PackedStringArray("click_area", "lockdown_sprite", "production_increase_sprite", "audioPlayer")]
 script = ExtResource("1_0wvpq")
 growth = 1.0
 click_area = NodePath("Sprite/Area2D")
 lockdown_sprite = NodePath("Sprite/lockdown_sprite")
+production_increase_sprite = NodePath("Sprite/boost_sprite")
 audioPlayer = NodePath("AudioStreamPlayer2D")
 receive_package_sound = ExtResource("2_gc6nq")
 player_takeover_sound = ExtResource("3_t43u5")
@@ -29,6 +31,12 @@ visible = false
 position = Vector2(2.000001, -0.99999976)
 scale = Vector2(0.35199004, 0.35199004)
 texture = ExtResource("3_u3pyk")
+
+[node name="boost_sprite" type="Sprite2D" parent="Sprite" unique_id=1164573017]
+visible = false
+position = Vector2(2.000001, -0.99999976)
+scale = Vector2(0.25781247, 0.25781247)
+texture = ExtResource("7_87v45")
 
 [node name="Area2D" type="Area2D" parent="Sprite" unique_id=1368191814]
 

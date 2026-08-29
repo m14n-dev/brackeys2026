@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bafxjfvvr7o2a" path="res://arena/arena_2/connection_2_to_3.png" id="6_c3cjk"]
 [ext_resource type="PackedScene" uid="uid://dx27omxdqacou" path="res://special_powers/lockdown/lockdown_power.tscn" id="7_dv023"]
 [ext_resource type="Script" uid="uid://b2nvw43nnbirl" path="res://arena/Faction.gd" id="8_0tuoo"]
+[ext_resource type="PackedScene" uid="uid://dcmcxvn674xqp" path="res://special_powers/boost/boost_power.tscn" id="8_hpm1i"]
 [ext_resource type="Script" uid="uid://bog5gmtmfmy4p" path="res://ai/EnemyAi.gd" id="9_tfyns"]
 [ext_resource type="Script" uid="uid://3yvav4q5ks4v" path="res://ai/RetributionAiBehavior.gd" id="10_ml4ye"]
 
@@ -112,7 +113,10 @@ position = Vector2(865, 508)
 growth = 2.5
 faction_id = 2
 
-[node name="BasePower" parent="." unique_id=1298012714 instance=ExtResource("7_dv023")]
+[node name="LockdownPower" parent="." unique_id=1298012714 instance=ExtResource("7_dv023")]
+
+[node name="BoostPower" parent="." unique_id=2126310023 instance=ExtResource("8_hpm1i")]
+position = Vector2(0, 85)
 
 [node name="Player" type="Node2D" parent="." unique_id=968974591]
 script = ExtResource("8_0tuoo")

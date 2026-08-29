@@ -50,7 +50,13 @@ var lockdown_duration: float = 0
 @export var lockdown_sprite: Sprite2D
 
 var production_pause: bool = false # Powers can stop production temporarily
-var production_increase: bool = false # Powers can boost production temporarily
+
+var production_increase: bool = false: # Powers can boost production temporarilyset(val):
+	set(val):
+		production_increase = val
+		production_increase_sprite.visible = val
+var production_increase_duration: float = 0
+@export var production_increase_sprite: Sprite2D
 
 @export var audioPlayer: AudioStreamPlayer2D
 @export var receive_package_sound: AudioStreamMP3
@@ -88,6 +94,11 @@ func _process(delta):
 		lockdown_duration -= delta
 		if(lockdown_duration <= 0):
 			lockdown = false
+			
+	if(production_increase):
+		production_increase_duration -= delta
+		if(production_increase_duration <= 0):
+			production_increase = false
 	
 func update_faction_color():
 	var arena = $"../Arena"

@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://d23twgeya4hnu" path="res://special_powers/power_select.mp3" id="3_3f1rc"]
 [ext_resource type="AudioStream" uid="uid://dp1tyvhr4qr04" path="res://special_powers/power_unselect.mp3" id="4_rdn1d"]
 
-[node name="BasePower" unique_id=1298012714 instance=ExtResource("1_7bmbd")]
+[node name="LockdownPower" unique_id=1298012714 instance=ExtResource("1_7bmbd")]
 script = ExtResource("2_tw6bb")
 select_audio = ExtResource("3_3f1rc")
 unselect_audio = ExtResource("4_rdn1d")
