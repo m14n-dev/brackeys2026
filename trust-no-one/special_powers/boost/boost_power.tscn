@@ -12,5 +12,5 @@ cooldown = 16.0
 select_audio = ExtResource("3_xgwis")
 unselect_audio = ExtResource("4_tr7gh")
 
-[node name="Button" parent="." index="0" unique_id=410051357]
-text = "Boost"
+[node name="Label" parent="Button" parent_id_path=PackedInt32Array(1551904567) index="0" unique_id=1380812641]
+text = "BOOST"

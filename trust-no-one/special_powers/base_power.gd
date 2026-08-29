@@ -23,7 +23,7 @@ var is_usable:
 
 var currently_selected: bool = false;
 
-var button: Button
+var button: TextureButton
 var progress_bar: ProgressBar
 
 # Called when the node enters the scene tree for the first time.
