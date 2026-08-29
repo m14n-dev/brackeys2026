@@ -5,8 +5,8 @@
 [node name="BasePower" type="Node2D" unique_id=1298012714]
 
 [node name="Button" type="Button" parent="." unique_id=410051357]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 161.0
+offset_bottom = 82.0
 toggle_mode = true
 text = "Power"
 

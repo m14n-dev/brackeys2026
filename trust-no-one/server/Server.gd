@@ -49,7 +49,12 @@ var lockdown: bool = false: # Powers can lock down servers, preventing them from
 var lockdown_duration: float = 0
 @export var lockdown_sprite: Sprite2D
 
-var production_pause: bool = false # Powers can stop production temporarily
+var production_pause: bool = false: # Powers can stop production temporarily
+	set(val):
+		production_pause = val
+		production_pause_sprite.visible = val
+var production_pause_duration: float = 0
+@export var production_pause_sprite: Sprite2D
 
 var production_increase: bool = false: # Powers can boost production temporarilyset(val):
 	set(val):
@@ -99,6 +104,11 @@ func _process(delta):
 		production_increase_duration -= delta
 		if(production_increase_duration <= 0):
 			production_increase = false
+			
+	if(production_pause):
+		production_pause_duration -= delta
+		if(production_pause_duration <= 0):
+			production_pause = false
 	
 func update_faction_color():
 	var arena = $"../Arena"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmp26bdbo0epo"
-path="res://.godot/imported/lockdown_sprite.png-d87d619653bfee3d240be6a441ce44b3.ctex"
+uid="uid://kx2xxac4dtoc"
+path="res://.godot/imported/pause.png-fe4edb1f1c7cf235ef0b2e6ab81a4f77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://special_powers/lockdown/lockdown_sprite.png"
-dest_files=["res://.godot/imported/lockdown_sprite.png-d87d619653bfee3d240be6a441ce44b3.ctex"]
+source_file="res://special_powers/pause/pause.png"
+dest_files=["res://.godot/imported/pause.png-fe4edb1f1c7cf235ef0b2e6ab81a4f77.ctex"]
 
 [params]
 

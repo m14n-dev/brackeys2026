@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cqa8idrk6lm2a"]
+
+[ext_resource type="PackedScene" uid="uid://3eoc1tuth378" path="res://special_powers/base_power.tscn" id="1_orkth"]
+[ext_resource type="Script" uid="uid://pdhvhey67258" path="res://special_powers/pause/pause_power.gd" id="2_bn8ca"]
+
+[node name="PausePower" unique_id=1298012714 instance=ExtResource("1_orkth")]
+script = ExtResource("2_bn8ca")
+
+[node name="Button" parent="." index="0" unique_id=410051357]
+text = "Stop"

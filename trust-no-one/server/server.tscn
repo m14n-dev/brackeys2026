@@ -4,18 +4,20 @@
 [ext_resource type="AudioStream" uid="uid://bor5d5c000gfn" path="res://package/package_receive.mp3" id="2_gc6nq"]
 [ext_resource type="Texture2D" uid="uid://bi6u3ke4g3li6" path="res://server/sprite.png" id="2_u3pyk"]
 [ext_resource type="AudioStream" uid="uid://cof06hf41u8p8" path="res://server/player_takeover.mp3" id="3_t43u5"]
-[ext_resource type="Texture2D" uid="uid://88qleepphrbr" path="res://special_powers/lockdown/lockdown_sprite.png" id="3_u3pyk"]
+[ext_resource type="Texture2D" uid="uid://cmp26bdbo0epo" path="res://special_powers/lockdown/lockdown_sprite.png" id="3_u3pyk"]
 [ext_resource type="AudioStream" uid="uid://bq2y6bwbkti6w" path="res://server/enemy_takeover.mp3" id="4_87v45"]
 [ext_resource type="Texture2D" uid="uid://dhx1gn2bfeipf" path="res://special_powers/boost/boost.png" id="7_87v45"]
+[ext_resource type="Texture2D" uid="uid://kx2xxac4dtoc" path="res://special_powers/pause/pause.png" id="8_it51r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0wvpq"]
 radius = 107.0
 
-[node name="Node2D" type="Node2D" unique_id=1404967565 node_paths=PackedStringArray("click_area", "lockdown_sprite", "production_increase_sprite", "audioPlayer")]
+[node name="Node2D" type="Node2D" unique_id=1404967565 node_paths=PackedStringArray("click_area", "lockdown_sprite", "production_pause_sprite", "production_increase_sprite", "audioPlayer")]
 script = ExtResource("1_0wvpq")
 growth = 1.0
 click_area = NodePath("Sprite/Area2D")
 lockdown_sprite = NodePath("Sprite/lockdown_sprite")
+production_pause_sprite = NodePath("Sprite/pause_sprite")
 production_increase_sprite = NodePath("Sprite/boost_sprite")
 audioPlayer = NodePath("AudioStreamPlayer2D")
 receive_package_sound = ExtResource("2_gc6nq")
@@ -28,15 +30,21 @@ texture = ExtResource("2_u3pyk")
 
 [node name="lockdown_sprite" type="Sprite2D" parent="Sprite" unique_id=2031238830]
 visible = false
-position = Vector2(2.000001, -0.99999976)
-scale = Vector2(0.35199004, 0.35199004)
+position = Vector2(-73, -37)
+scale = Vector2(0.19199248, 0.19199248)
 texture = ExtResource("3_u3pyk")
 
 [node name="boost_sprite" type="Sprite2D" parent="Sprite" unique_id=1164573017]
 visible = false
-position = Vector2(2.000001, -0.99999976)
-scale = Vector2(0.25781247, 0.25781247)
+position = Vector2(-73, 6)
+scale = Vector2(0.066689745, 0.06668975)
 texture = ExtResource("7_87v45")
+
+[node name="pause_sprite" type="Sprite2D" parent="Sprite" unique_id=561677529]
+visible = false
+position = Vector2(-73, 40)
+scale = Vector2(0.061245907, 0.061245907)
+texture = ExtResource("8_it51r")
 
 [node name="Area2D" type="Area2D" parent="Sprite" unique_id=1368191814]
 
