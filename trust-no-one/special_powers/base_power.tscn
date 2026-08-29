@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://3eoc1tuth378"]
 
+[ext_resource type="Theme" uid="uid://d3xrl4tdwgscj" path="res://special_powers/power_theme.tres" id="1_kolm6"]
+
 [node name="BasePower" type="Node2D" unique_id=1298012714]
 
 [node name="Button" type="Button" parent="." unique_id=410051357]
@@ -7,5 +9,21 @@ offset_right = 8.0
 offset_bottom = 8.0
 toggle_mode = true
 text = "Power"
+
+[node name="ProgressBar" type="ProgressBar" parent="Button" unique_id=805265664]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.632
+anchor_top = 0.77400005
+anchor_right = 0.98200005
+anchor_bottom = 0.96800005
+offset_left = -0.024002075
+offset_top = 0.0059986115
+offset_right = 0.025997162
+offset_bottom = -0.0080013275
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("1_kolm6")
+show_percentage = false
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2049333414]
