@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dovf0uuhggboa" path="res://arena/Arena.tscn" id="1_xsc7q"]
 [ext_resource type="Script" uid="uid://b2nvw43nnbirl" path="res://arena/Faction.gd" id="3_maffh"]
 [ext_resource type="Script" uid="uid://bog5gmtmfmy4p" path="res://ai/EnemyAi.gd" id="4_8tayl"]
-[ext_resource type="Script" uid="uid://ca3rj0thvcik6" path="res://ai/AiBehavior.gd" id="5_vkel1"]
+[ext_resource type="Script" uid="uid://b4aeq7ah88bh1" path="res://ai/AllOutAiBehavior.gd" id="4_qa4m7"]
 [ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="6_maffh"]
 [ext_resource type="PackedScene" uid="uid://djhky8qb4vngw" path="res://connection/Connection.tscn" id="7_vkel1"]
 [ext_resource type="Texture2D" uid="uid://dwybh3b784clb" path="res://arena/arena_3/connection_1.png" id="8_3jjq0"]
@@ -12,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://byun1pl8fcg0k" path="res://arena/arena_3/connection_4.png" id="11_qa4m7"]
 [ext_resource type="Texture2D" uid="uid://u2dvvdx7won1" path="res://arena/arena_3/connection_5.png" id="12_vuf4c"]
 
-[sub_resource type="Resource" id="Resource_3jjq0"]
-script = ExtResource("5_vkel1")
-metadata/_custom_type_script = "uid://ca3rj0thvcik6"
+[sub_resource type="Resource" id="Resource_qa4m7"]
+script = ExtResource("4_qa4m7")
+metadata/_custom_type_script = "uid://b4aeq7ah88bh1"
 
 [sub_resource type="Curve2D" id="Curve2D_ibq3o"]
 _data = {
@@ -57,12 +57,12 @@ color = Color(0.5, 0.75, 0.45000002, 1)
 [node name="Enemy" type="Node2D" parent="." unique_id=1736889985]
 position = Vector2(415, 409)
 script = ExtResource("4_8tayl")
-behavior = SubResource("Resource_3jjq0")
+behavior = SubResource("Resource_qa4m7")
 id = 1
 color = Color(0.77, 0.48509997, 0.5135899, 1)
 
 [node name="PlayerServerA" parent="." unique_id=1404967565 instance=ExtResource("6_maffh")]
-position = Vector2(142, 38)
+position = Vector2(142, 90)
 growth = 4.0
 
 [node name="ConnectionAto1" parent="." unique_id=1579168215 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("7_vkel1")]
@@ -85,7 +85,8 @@ position = Vector2(207, 127)
 position = Vector2(428, 255)
 
 [node name="EnemyServer1" parent="." unique_id=1591144704 instance=ExtResource("6_maffh")]
-position = Vector2(519, 255)
+position = Vector2(521, 309)
+scale = Vector2(0.8, 0.8)
 faction_id = 1
 
 [node name="Connection1to4" parent="." unique_id=971984494 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("7_vkel1")]
@@ -127,19 +128,23 @@ position = Vector2(454, 510)
 position = Vector2(598, 593)
 
 [node name="EnemyServer2" parent="." unique_id=124066517 instance=ExtResource("6_maffh")]
-position = Vector2(806, 255)
+position = Vector2(805, 310)
+scale = Vector2(0.8, 0.8)
 faction_id = 1
 
 [node name="EnemyServer3" parent="." unique_id=82061437 instance=ExtResource("6_maffh")]
-position = Vector2(935, 331)
+position = Vector2(923, 379)
+scale = Vector2(0.8, 0.8)
 faction_id = 1
 
 [node name="EnemyServer4" parent="." unique_id=1316788121 instance=ExtResource("6_maffh")]
-position = Vector2(520, 421)
+position = Vector2(521, 475)
+scale = Vector2(0.8, 0.8)
 faction_id = 1
 
 [node name="EnemyServer5" parent="." unique_id=1709299274 instance=ExtResource("6_maffh")]
-position = Vector2(663, 502)
+position = Vector2(663, 556)
+scale = Vector2(0.8, 0.8)
 faction_id = 1
 
 [node name="Connection1to2" parent="." unique_id=1289456471 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("7_vkel1")]

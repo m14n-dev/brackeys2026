@@ -61,10 +61,11 @@ position = Vector2(415, 202)
 position = Vector2(779, 202)
 
 [node name="server1" parent="." unique_id=1404967565 instance=ExtResource("4_ml4ye")]
-position = Vector2(338, 121)
+position = Vector2(337, 173)
+scale = Vector2(0.5, 0.5)
 
 [node name="server2" parent="." unique_id=172511505 instance=ExtResource("4_ml4ye")]
-position = Vector2(857, 121)
+position = Vector2(858, 173)
 growth = 2.5
 faction_id = 1
 
@@ -107,7 +108,7 @@ position = Vector2(806, 217)
 position = Vector2(767, 435)
 
 [node name="server3" parent="." unique_id=2014041129 instance=ExtResource("4_ml4ye")]
-position = Vector2(857, 451)
+position = Vector2(865, 508)
 growth = 2.5
 faction_id = 2
 

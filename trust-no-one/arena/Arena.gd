@@ -81,3 +81,33 @@ func get_ports_by_faction(id: int) -> Array[Port]:
 		if port is Port and (port as Port).server.faction_id == id:
 			result.append(port as Port)
 	return result
+
+func collect_game_state() -> GameState:
+	var state = GameState.new()
+	for node in get_tree().get_nodes_in_group("server"):
+		var server: Server = node as Server
+		
+		if server.color not in state.by_color:
+			state.by_color[server.color] = GameStateSummary.new()
+		state.by_color[server.color].servers.append(server)
+		state.by_color[server.color].total_power += server.power
+		
+		if server.faction_id not in state.by_id:
+			state.by_id[server.faction_id] = GameStateSummary.new()
+		state.by_id[server.faction_id].servers.append(server)
+		state.by_id[server.faction_id].total_power += server.power
+	
+	for node in get_tree().get_nodes_in_group("package"):
+		var pkg: Package = node as Package
+		
+		if pkg.color not in state.by_color:
+			state.by_color[pkg.color] = GameStateSummary.new()
+		state.by_color[pkg.color].packages.append(pkg)
+		state.by_color[pkg.color].total_power += pkg.power
+		
+		if pkg.faction not in state.by_id:
+			state.by_id[pkg.faction] = GameStateSummary.new()
+		state.by_id[pkg.faction].packages.append(pkg)
+		state.by_id[pkg.faction].total_power += pkg.power
+		
+	return state
