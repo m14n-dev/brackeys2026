@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cmk2ux0penk3j"]
+
+[ext_resource type="Script" uid="uid://cw5d3hhn12ixp" path="res://global_sound_manager/global_sound_manager.gd" id="1_g6hpu"]
+[ext_resource type="AudioStream" uid="uid://cx08n7cpbubmk" path="res://package/package_spawn.mp3" id="2_to7m2"]
+
+[node name="GlobalSoundManager" type="Node2D" unique_id=1067953623]
+script = ExtResource("1_g6hpu")
+
+[node name="PackageCreationPlayer" type="AudioStreamPlayer2D" parent="." unique_id=955868217]
+stream = ExtResource("2_to7m2")

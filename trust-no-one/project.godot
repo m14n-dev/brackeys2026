@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SignalBus="*uid://cy4gmy70qjnwb"
+GlobalSoundManager="*uid://cmk2ux0penk3j"
 
 [display]
 
