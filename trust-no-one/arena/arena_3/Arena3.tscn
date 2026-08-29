@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bi4mhlknovumg"]
 
 [ext_resource type="PackedScene" uid="uid://dovf0uuhggboa" path="res://arena/Arena.tscn" id="1_xsc7q"]
+[ext_resource type="PackedScene" uid="uid://b1g47g2f0dn86" path="res://arena/arena_4/Arena4.tscn" id="2_084up"]
 [ext_resource type="Script" uid="uid://b2nvw43nnbirl" path="res://arena/Faction.gd" id="3_maffh"]
 [ext_resource type="Script" uid="uid://bog5gmtmfmy4p" path="res://ai/EnemyAi.gd" id="4_8tayl"]
 [ext_resource type="Script" uid="uid://b4aeq7ah88bh1" path="res://ai/AllOutAiBehavior.gd" id="4_qa4m7"]
@@ -50,6 +51,7 @@ point_count = 6
 [node name="Arena3" type="Node2D" unique_id=332965414]
 
 [node name="Arena" parent="." unique_id=109013526 instance=ExtResource("1_xsc7q")]
+next_level = ExtResource("2_084up")
 
 [node name="Player" type="Node2D" parent="." unique_id=1525136805]
 script = ExtResource("3_maffh")
