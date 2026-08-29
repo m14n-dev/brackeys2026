@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dovf0uuhggboa"]
 
-[ext_resource type="Texture2D" uid="uid://c61ppuggqxtnq" path="res://arena/background.png" id="1_2sj4i"]
 [ext_resource type="Script" uid="uid://dwyh0vky1b4nv" path="res://arena/Arena.gd" id="1_7pan0"]
 [ext_resource type="Texture2D" uid="uid://dr45eq0a1pc8u" path="res://arena/pattern_a.png" id="2_dk78b"]
 [ext_resource type="Script" uid="uid://dmmqo5xf7jhou" path="res://arena/PatternAnim.gd" id="2_em8bs"]
+[ext_resource type="Texture2D" uid="uid://dc1s5wmvf4cx6" path="res://arena/arena_4/arena_4.png" id="2_wtd71"]
 [ext_resource type="Texture2D" uid="uid://dpgd4ppinafu2" path="res://arena/pattern_b.png" id="3_gnra2"]
 [ext_resource type="Texture2D" uid="uid://dt0a4j4bpxd61" path="res://ui/button.png" id="6_wtd71"]
 [ext_resource type="Texture2D" uid="uid://0qgcjameaa3o" path="res://ui/button_pressed.png" id="7_us1c4"]
@@ -15,7 +15,7 @@ script = ExtResource("1_7pan0")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=848387431]
 position = Vector2(576, 324)
-texture = ExtResource("1_2sj4i")
+texture = ExtResource("2_wtd71")
 
 [node name="PatternAnimator" type="Node2D" parent="Background" unique_id=1363256741]
 script = ExtResource("2_em8bs")

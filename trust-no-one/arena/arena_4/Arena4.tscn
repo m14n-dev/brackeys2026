@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://b1g47g2f0dn86"]
+
+[ext_resource type="PackedScene" uid="uid://dovf0uuhggboa" path="res://arena/Arena.tscn" id="1_sdu0w"]
+[ext_resource type="Script" uid="uid://b2nvw43nnbirl" path="res://arena/Faction.gd" id="2_skelv"]
+[ext_resource type="Script" uid="uid://bog5gmtmfmy4p" path="res://ai/EnemyAi.gd" id="3_lgt8t"]
+[ext_resource type="Script" uid="uid://eofjqqqc1t1u" path="res://ai/SmartAiBehavior.gd" id="4_qo3jw"]
+[ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="5_nbrnp"]
+[ext_resource type="PackedScene" uid="uid://djhky8qb4vngw" path="res://connection/Connection.tscn" id="6_acyjt"]
+[ext_resource type="Texture2D" uid="uid://b4p3b0vekhvpv" path="res://arena/arena_4/connection_1.png" id="7_3lobk"]
+[ext_resource type="Texture2D" uid="uid://c5oq2iaxmhtr2" path="res://arena/arena_4/connection_4.png" id="8_g82bb"]
+[ext_resource type="Texture2D" uid="uid://dqrn5mdtks3yc" path="res://arena/arena_4/connection_2.png" id="10_gty4i"]
+[ext_resource type="Texture2D" uid="uid://tkpu62i1rfdx" path="res://arena/arena_4/connection_3.png" id="11_06j5f"]
+
+[sub_resource type="Resource" id="Resource_qo3jw"]
+script = ExtResource("4_qo3jw")
+metadata/_custom_type_script = "uid://eofjqqqc1t1u"
+
+[sub_resource type="Curve2D" id="Curve2D_5taaq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 34, -19, 0, 0, 0, 0, -34, 19)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_qo3jw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -49, -13, 0, 0, 0, 0, 7, 18, 0, 0, 0, 0, 27, 18, 0, 0, 0, 0, 48, 6)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_0e8rg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -64, -19, 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, -18, 43)
+}
+point_count = 4
+
+[node name="Arena3" type="Node2D" unique_id=332965414]
+
+[node name="Arena" parent="." unique_id=109013526 instance=ExtResource("1_sdu0w")]
+
+[node name="Player" type="Node2D" parent="." unique_id=1525136805]
+script = ExtResource("2_skelv")
+color = Color(0.5, 0.75, 0.45000002, 1)
+
+[node name="Enemy1" type="Node2D" parent="." unique_id=1736889985]
+position = Vector2(415, 409)
+script = ExtResource("3_lgt8t")
+behavior = SubResource("Resource_qo3jw")
+id = 1
+color = Color(0.77, 0.48509997, 0.5135899, 1)
+
+[node name="Enemy2" type="Node2D" parent="." unique_id=343924147]
+position = Vector2(415, 409)
+script = ExtResource("3_lgt8t")
+behavior = SubResource("Resource_qo3jw")
+id = 2
+color = Color(0.5411765, 0.7529412, 0.87058824, 1)
+
+[node name="PlayerServer" parent="." unique_id=1404967565 instance=ExtResource("5_nbrnp")]
+position = Vector2(117, 77)
+
+[node name="EnemyServer1" parent="." unique_id=482181833 instance=ExtResource("5_nbrnp")]
+position = Vector2(324, 196)
+scale = Vector2(0.7, 0.7)
+faction_id = 2
+
+[node name="EnemyServer2" parent="." unique_id=1441924264 instance=ExtResource("5_nbrnp")]
+position = Vector2(532, 316)
+scale = Vector2(0.7, 0.7)
+faction_id = 2
+
+[node name="EnemyServer3" parent="." unique_id=2080120587 instance=ExtResource("5_nbrnp")]
+position = Vector2(740, 436)
+scale = Vector2(0.7, 0.7)
+faction_id = 2
+
+[node name="EnemyServer4" parent="." unique_id=74160921 instance=ExtResource("5_nbrnp")]
+position = Vector2(519, 563)
+scale = Vector2(0.7, 0.7)
+faction_id = 1
+
+[node name="EnemyServer5" parent="." unique_id=1876934360 instance=ExtResource("5_nbrnp")]
+position = Vector2(991, 440)
+scale = Vector2(0.7, 0.7)
+faction_id = 1
+
+[node name="EnemyServer6" parent="." unique_id=1995169411 instance=ExtResource("5_nbrnp")]
+position = Vector2(747, 598)
+scale = Vector2(0.7, 0.7)
+faction_id = 1
+
+[node name="ConnectionPlayerTo1" parent="." unique_id=1579168215 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("6_acyjt")]
+position = Vector2(207, 126)
+point_a = NodePath("../PlayerServer")
+point_b = NodePath("../EnemyServer1")
+
+[node name="Sprite2D" parent="ConnectionPlayerTo1" index="0" unique_id=343096505]
+texture = ExtResource("7_3lobk")
+
+[node name="PortA" parent="ConnectionPlayerTo1" index="2" unique_id=954255240]
+position = Vector2(-25, -14)
+
+[node name="PortB" parent="ConnectionPlayerTo1" index="3" unique_id=706148699]
+position = Vector2(24, 14)
+
+[node name="Connection1To2" parent="." unique_id=213863135 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("6_acyjt")]
+position = Vector2(414, 246)
+point_a = NodePath("../EnemyServer1")
+point_b = NodePath("../EnemyServer2")
+
+[node name="Sprite2D" parent="Connection1To2" index="0" unique_id=343096505]
+texture = ExtResource("7_3lobk")
+
+[node name="PortA" parent="Connection1To2" index="2" unique_id=954255240]
+position = Vector2(-25, -14)
+
+[node name="PortB" parent="Connection1To2" index="3" unique_id=706148699]
+position = Vector2(24, 14)
+
+[node name="Connection2To3" parent="." unique_id=3542072 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("6_acyjt")]
+position = Vector2(621, 366)
+point_a = NodePath("../EnemyServer2")
+point_b = NodePath("../EnemyServer3")
+
+[node name="Sprite2D" parent="Connection2To3" index="0" unique_id=343096505]
+texture = ExtResource("7_3lobk")
+
+[node name="PortA" parent="Connection2To3" index="2" unique_id=954255240]
+position = Vector2(-25, -14)
+
+[node name="PortB" parent="Connection2To3" index="3" unique_id=706148699]
+position = Vector2(24, 14)
+
+[node name="Connection3To4" parent="." unique_id=172664339 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("6_acyjt")]
+position = Vector2(640, 492)
+point_a = NodePath("../EnemyServer3")
+point_b = NodePath("../EnemyServer4")
+
+[node name="Sprite2D" parent="Connection3To4" index="0" unique_id=343096505]
+texture = ExtResource("10_gty4i")
+
+[node name="PathAtoB" parent="Connection3To4" index="1" unique_id=860685861]
+curve = SubResource("Curve2D_5taaq")
+
+[node name="PortA" parent="Connection3To4" index="2" unique_id=954255240]
+position = Vector2(34, -19)
+
+[node name="PortB" parent="Connection3To4" index="3" unique_id=706148699]
+position = Vector2(-34, 19)
+
+[node name="Connection3To5" parent="." unique_id=1087811308 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("6_acyjt")]
+position = Vector2(879, 471)
+point_a = NodePath("../EnemyServer3")
+point_b = NodePath("../EnemyServer5")
+
+[node name="Sprite2D" parent="Connection3To5" index="0" unique_id=343096505]
+texture = ExtResource("11_06j5f")
+
+[node name="PathAtoB" parent="Connection3To5" index="1" unique_id=860685861]
+curve = SubResource("Curve2D_qo3jw")
+
+[node name="PortA" parent="Connection3To5" index="2" unique_id=954255240]
+position = Vector2(-49, -13)
+
+[node name="PortB" parent="Connection3To5" index="3" unique_id=706148699]
+position = Vector2(48, 6)
+
+[node name="Connection3To6" parent="." unique_id=1002126461 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("6_acyjt")]
+position = Vector2(844, 507)
+point_a = NodePath("../EnemyServer3")
+point_b = NodePath("../EnemyServer6")
+
+[node name="Sprite2D" parent="Connection3To6" index="0" unique_id=343096505]
+position = Vector2(-37, 12)
+texture = ExtResource("8_g82bb")
+
+[node name="PathAtoB" parent="Connection3To6" index="1" unique_id=860685861]
+curve = SubResource("Curve2D_0e8rg")
+
+[node name="PortA" parent="Connection3To6" index="2" unique_id=954255240]
+position = Vector2(-64, -19)
+
+[node name="PortB" parent="Connection3To6" index="3" unique_id=706148699]
+position = Vector2(-18, 43)
+
+[editable path="ConnectionPlayerTo1"]
+[editable path="Connection1To2"]
+[editable path="Connection2To3"]
+[editable path="Connection3To4"]
+[editable path="Connection3To5"]
+[editable path="Connection3To6"]
