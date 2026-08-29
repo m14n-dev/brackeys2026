@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b3nek1vcj1gw5"]
+
+[ext_resource type="PackedScene" uid="uid://3eoc1tuth378" path="res://special_powers/base_power.tscn" id="1_yawc8"]
+[ext_resource type="Script" uid="uid://dj6mvepsjav0n" path="res://special_powers/disguise/disguise_power.gd" id="2_23rik"]
+[ext_resource type="AudioStream" uid="uid://d23twgeya4hnu" path="res://special_powers/power_select.mp3" id="3_on8x2"]
+[ext_resource type="AudioStream" uid="uid://dp1tyvhr4qr04" path="res://special_powers/power_unselect.mp3" id="4_rrp18"]
+
+[node name="DisguisePower" unique_id=1298012714 instance=ExtResource("1_yawc8")]
+script = ExtResource("2_23rik")
+select_audio = ExtResource("3_on8x2")
+unselect_audio = ExtResource("4_rrp18")
+
+[node name="Button" parent="." index="0" unique_id=410051357]
+text = "Disguise"

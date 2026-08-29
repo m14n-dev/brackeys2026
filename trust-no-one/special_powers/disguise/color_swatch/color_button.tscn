@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://boqpuvwmygt5h"]
+
+[node name="ColorButton" type="Button" unique_id=1046502607]
+z_index = 100
+custom_minimum_size = Vector2(50, 50)
+flat = true
+
+[node name="background" type="ColorRect" parent="." unique_id=408365638]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="foreground" type="ColorRect" parent="." unique_id=57115659]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
