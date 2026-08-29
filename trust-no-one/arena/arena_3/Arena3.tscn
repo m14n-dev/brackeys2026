@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ba8yx0k8jvyxc" path="res://arena/arena_3/connection_2.png" id="9_3jjq0"]
 [ext_resource type="Texture2D" uid="uid://bfh8nn2hbxlqo" path="res://arena/arena_3/connection_3.png" id="10_ibq3o"]
 [ext_resource type="Texture2D" uid="uid://byun1pl8fcg0k" path="res://arena/arena_3/connection_4.png" id="11_qa4m7"]
+[ext_resource type="PackedScene" uid="uid://dx27omxdqacou" path="res://special_powers/lockdown/lockdown_power.tscn" id="12_084up"]
 [ext_resource type="Texture2D" uid="uid://u2dvvdx7won1" path="res://arena/arena_3/connection_5.png" id="12_vuf4c"]
 
 [sub_resource type="Resource" id="Resource_qa4m7"]
@@ -184,6 +185,9 @@ position = Vector2(766, 360)
 
 [node name="PortB" parent="Connection2to3" index="3" unique_id=706148699]
 position = Vector2(844, 405)
+
+[node name="LockdownPower" parent="Connection2to3" unique_id=1298012714 instance=ExtResource("12_084up")]
+position = Vector2(0, 575)
 
 [editable path="ConnectionAto1"]
 [editable path="Connection1to4"]
