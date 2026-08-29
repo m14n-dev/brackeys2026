@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://ct2mnm6sbufww"]
+
+[ext_resource type="Script" uid="uid://d0ene7xqqkiny" path="res://menus/credit_screen.gd" id="1_ec30b"]
+[ext_resource type="Texture2D" uid="uid://c61ppuggqxtnq" path="res://arena/background.png" id="1_x7ad0"]
+[ext_resource type="Script" uid="uid://dmmqo5xf7jhou" path="res://arena/PatternAnim.gd" id="2_wrdto"]
+[ext_resource type="Texture2D" uid="uid://dpgd4ppinafu2" path="res://arena/pattern_b.png" id="3_cmax4"]
+[ext_resource type="Texture2D" uid="uid://dr45eq0a1pc8u" path="res://arena/pattern_a.png" id="4_j2kmk"]
+[ext_resource type="Texture2D" uid="uid://dt0a4j4bpxd61" path="res://ui/button.png" id="5_1uc0n"]
+[ext_resource type="Texture2D" uid="uid://0qgcjameaa3o" path="res://ui/button_pressed.png" id="6_ec30b"]
+[ext_resource type="Texture2D" uid="uid://8vyu5l5y1d5a" path="res://ui/button_focus.png" id="7_u6bad"]
+[ext_resource type="Texture2D" uid="uid://caaqyf056jw40" path="res://ui/button_disabled.png" id="8_15mim"]
+
+[node name="CreditScreen" type="Node2D" unique_id=459769556]
+script = ExtResource("1_ec30b")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1421646287]
+position = Vector2(576, 324)
+texture = ExtResource("1_x7ad0")
+
+[node name="PatternAnimator" type="Node2D" parent="Background" unique_id=1830928482]
+script = ExtResource("2_wrdto")
+
+[node name="PatternB" type="Sprite2D" parent="Background/PatternAnimator" unique_id=2061203215]
+position = Vector2(253, 318)
+texture = ExtResource("3_cmax4")
+
+[node name="PatternA" type="Sprite2D" parent="Background" unique_id=398442988]
+texture = ExtResource("4_j2kmk")
+
+[node name="Label" type="Label" parent="." unique_id=1021535142]
+offset_left = 28.0
+offset_top = 51.0
+offset_right = 1128.0
+offset_bottom = 438.0
+theme_override_font_sizes/font_size = 22
+text = "HARDLINK WAS BROUGHT TO YOU BY THE M14N COLLECTIVE
+
+REPRESENTED BY ALDER AND GLYPH
+
+
+
+
+FONT: SIXTYFOUR BY JENS KUTILEK
+
+SOUNDS: 
+
+MUSIC: 
+
+
+THANK YOU FOR PLAYING!"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=265602119]
+offset_left = 1.0
+offset_top = 506.0
+offset_right = 1149.0
+offset_bottom = 647.0
+theme_override_constants/separation = 52
+alignment = 1
+
+[node name="BackButton" type="TextureButton" parent="HBoxContainer" unique_id=74699545]
+layout_mode = 2
+texture_normal = ExtResource("5_1uc0n")
+texture_pressed = ExtResource("6_ec30b")
+texture_hover = ExtResource("7_u6bad")
+texture_disabled = ExtResource("8_15mim")
+texture_focused = ExtResource("7_u6bad")
+
+[node name="Label" type="Label" parent="HBoxContainer/BackButton" unique_id=779993457]
+layout_mode = 0
+offset_left = 34.0
+offset_right = 286.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0.7411765, 1, 0.96862745, 1)
+theme_override_font_sizes/font_size = 32
+text = "Return"
+vertical_alignment = 1
+
+[connection signal="pressed" from="HBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dovf0uuhggboa" path="res://arena/Arena.tscn" id="1_0s4dw"]
 [ext_resource type="PackedScene" uid="uid://djhky8qb4vngw" path="res://connection/Connection.tscn" id="2_0tuoo"]
+[ext_resource type="PackedScene" uid="uid://bi4mhlknovumg" path="res://arena/arena_3/Arena3.tscn" id="2_upvo6"]
 [ext_resource type="Texture2D" uid="uid://cs0n45qvyq32h" path="res://arena/arena_2/connection_1_to_2.png" id="3_tfyns"]
 [ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="4_ml4ye"]
 [ext_resource type="Texture2D" uid="uid://cn6mb8s5tqrae" path="res://arena/arena_2/connection_1_to_3.png" id="5_hpm1i"]
@@ -43,6 +44,7 @@ metadata/_custom_type_script = "uid://3yvav4q5ks4v"
 [node name="Arena2" type="Node2D" unique_id=428041530]
 
 [node name="Arena" parent="." unique_id=109013526 instance=ExtResource("1_0s4dw")]
+next_level = ExtResource("2_upvo6")
 
 [node name="conn_1_to_2" parent="." unique_id=202580876 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("2_0tuoo")]
 point_a = NodePath("../server1")

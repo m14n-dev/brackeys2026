@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dr45eq0a1pc8u" path="res://arena/pattern_a.png" id="2_dk78b"]
 [ext_resource type="Script" uid="uid://dmmqo5xf7jhou" path="res://arena/PatternAnim.gd" id="2_em8bs"]
 [ext_resource type="Texture2D" uid="uid://dpgd4ppinafu2" path="res://arena/pattern_b.png" id="3_gnra2"]
+[ext_resource type="Texture2D" uid="uid://dt0a4j4bpxd61" path="res://ui/button.png" id="6_wtd71"]
+[ext_resource type="Texture2D" uid="uid://0qgcjameaa3o" path="res://ui/button_pressed.png" id="7_us1c4"]
+[ext_resource type="Texture2D" uid="uid://8vyu5l5y1d5a" path="res://ui/button_focus.png" id="8_s00uq"]
+[ext_resource type="Texture2D" uid="uid://caaqyf056jw40" path="res://ui/button_disabled.png" id="9_1mwsf"]
 
 [node name="Arena" type="Node2D" unique_id=109013526]
 script = ExtResource("1_7pan0")
@@ -33,7 +37,7 @@ offset_bottom = 378.0
 theme_override_colors/font_color = Color(0.65, 0.143, 0.143, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
-text = "[>] ERROR: 
+text = "ERROR: 
 NO RESPONSE
 FROM [::1] 
 FOR 0 SECONDS"
@@ -53,3 +57,98 @@ text = "SCAN COMPLETE
 NO PROCESSES
 REMAIN
 "
+
+[node name="GameOverMenus" type="HBoxContainer" parent="." unique_id=481059052]
+visible = false
+z_index = 1000
+offset_left = 24.0
+offset_top = 506.0
+offset_right = 1149.0
+offset_bottom = 647.0
+theme_override_constants/separation = 52
+
+[node name="RetryButton" type="TextureButton" parent="GameOverMenus" unique_id=1477148473]
+layout_mode = 2
+texture_normal = ExtResource("6_wtd71")
+texture_pressed = ExtResource("7_us1c4")
+texture_hover = ExtResource("8_s00uq")
+texture_disabled = ExtResource("9_1mwsf")
+texture_focused = ExtResource("8_s00uq")
+
+[node name="Label" type="Label" parent="GameOverMenus/RetryButton" unique_id=739803086]
+layout_mode = 0
+offset_left = 34.0
+offset_right = 286.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(1, 0.74, 0.74, 1)
+theme_override_font_sizes/font_size = 32
+text = "Retry"
+vertical_alignment = 1
+
+[node name="ReturnButton" type="TextureButton" parent="GameOverMenus" unique_id=899221133]
+layout_mode = 2
+texture_normal = ExtResource("6_wtd71")
+texture_pressed = ExtResource("7_us1c4")
+texture_hover = ExtResource("8_s00uq")
+texture_disabled = ExtResource("9_1mwsf")
+texture_focused = ExtResource("8_s00uq")
+
+[node name="Label" type="Label" parent="GameOverMenus/ReturnButton" unique_id=1550773241]
+layout_mode = 0
+offset_left = 34.0
+offset_right = 286.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(1, 0.74, 0.74, 1)
+theme_override_font_sizes/font_size = 32
+text = "Return"
+vertical_alignment = 1
+
+[node name="GameWonMenus" type="HBoxContainer" parent="." unique_id=573629034]
+visible = false
+z_index = 1000
+offset_left = 24.0
+offset_top = 506.0
+offset_right = 1149.0
+offset_bottom = 647.0
+theme_override_constants/separation = 52
+
+[node name="NextButton" type="TextureButton" parent="GameWonMenus" unique_id=853641123]
+layout_mode = 2
+texture_normal = ExtResource("6_wtd71")
+texture_pressed = ExtResource("7_us1c4")
+texture_hover = ExtResource("8_s00uq")
+texture_disabled = ExtResource("9_1mwsf")
+texture_focused = ExtResource("8_s00uq")
+
+[node name="Label" type="Label" parent="GameWonMenus/NextButton" unique_id=793026024]
+layout_mode = 0
+offset_left = 34.0
+offset_right = 286.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0.74, 1, 0.9696667, 1)
+theme_override_font_sizes/font_size = 32
+text = "Next"
+vertical_alignment = 1
+
+[node name="ReturnButton" type="TextureButton" parent="GameWonMenus" unique_id=1307631850]
+layout_mode = 2
+texture_normal = ExtResource("6_wtd71")
+texture_pressed = ExtResource("7_us1c4")
+texture_hover = ExtResource("8_s00uq")
+texture_disabled = ExtResource("9_1mwsf")
+texture_focused = ExtResource("8_s00uq")
+
+[node name="Label" type="Label" parent="GameWonMenus/ReturnButton" unique_id=1972063736]
+layout_mode = 0
+offset_left = 34.0
+offset_right = 286.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0.74, 1, 0.9696667, 1)
+theme_override_font_sizes/font_size = 32
+text = "Return"
+vertical_alignment = 1
+
+[connection signal="pressed" from="GameOverMenus/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="GameOverMenus/ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="GameWonMenus/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="GameWonMenus/ReturnButton" to="." method="_on_return_button_pressed"]

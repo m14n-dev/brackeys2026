@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://drctpma8oegg"]
+
+[ext_resource type="Script" uid="uid://xs7uvb6rl27u" path="res://menus/TitleScreen.gd" id="1_iuyk1"]
+[ext_resource type="Texture2D" uid="uid://c61ppuggqxtnq" path="res://arena/background.png" id="2_qtv8f"]
+[ext_resource type="Script" uid="uid://dmmqo5xf7jhou" path="res://arena/PatternAnim.gd" id="3_kq1bf"]
+[ext_resource type="Texture2D" uid="uid://dpgd4ppinafu2" path="res://arena/pattern_b.png" id="4_yhagl"]
+[ext_resource type="Texture2D" uid="uid://dr45eq0a1pc8u" path="res://arena/pattern_a.png" id="5_e802i"]
+[ext_resource type="Texture2D" uid="uid://byxesme4xxpff" path="res://menus/title_screen.png" id="6_brdya"]
+[ext_resource type="Texture2D" uid="uid://dt0a4j4bpxd61" path="res://ui/button.png" id="7_2umfo"]
+[ext_resource type="Texture2D" uid="uid://0qgcjameaa3o" path="res://ui/button_pressed.png" id="8_5wabf"]
+[ext_resource type="Texture2D" uid="uid://8vyu5l5y1d5a" path="res://ui/button_focus.png" id="9_xkgnj"]
+[ext_resource type="Texture2D" uid="uid://caaqyf056jw40" path="res://ui/button_disabled.png" id="10_e04ke"]
+
+[node name="TitleScreen" type="Node2D" unique_id=1620197838]
+script = ExtResource("1_iuyk1")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1739085262]
+position = Vector2(576, 324)
+texture = ExtResource("2_qtv8f")
+
+[node name="PatternAnimator" type="Node2D" parent="Background" unique_id=1930241525]
+script = ExtResource("3_kq1bf")
+
+[node name="PatternB" type="Sprite2D" parent="Background/PatternAnimator" unique_id=1999085151]
+position = Vector2(253, 318)
+texture = ExtResource("4_yhagl")
+
+[node name="PatternA" type="Sprite2D" parent="Background" unique_id=480349964]
+texture = ExtResource("5_e802i")
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=220032312]
+position = Vector2(576, 246)
+texture = ExtResource("6_brdya")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1528736194]
+offset_left = 1.0
+offset_top = 506.0
+offset_right = 1149.0
+offset_bottom = 647.0
+theme_override_constants/separation = 52
+alignment = 1
+
+[node name="LevelSelectButton" type="TextureButton" parent="HBoxContainer" unique_id=482143406]
+layout_mode = 2
+texture_normal = ExtResource("7_2umfo")
+texture_pressed = ExtResource("8_5wabf")
+texture_hover = ExtResource("9_xkgnj")
+texture_disabled = ExtResource("10_e04ke")
+texture_focused = ExtResource("9_xkgnj")
+
+[node name="Label" type="Label" parent="HBoxContainer/LevelSelectButton" unique_id=469035595]
+layout_mode = 0
+offset_left = 34.0
+offset_right = 286.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0.7411765, 1, 0.96862745, 1)
+theme_override_font_sizes/font_size = 32
+text = "Level
+Select"
+vertical_alignment = 1
+
+[node name="CreditsButton" type="TextureButton" parent="HBoxContainer" unique_id=1164679206]
+layout_mode = 2
+texture_normal = ExtResource("7_2umfo")
+texture_pressed = ExtResource("8_5wabf")
+texture_hover = ExtResource("9_xkgnj")
+texture_disabled = ExtResource("10_e04ke")
+texture_focused = ExtResource("9_xkgnj")
+
+[node name="Label" type="Label" parent="HBoxContainer/CreditsButton" unique_id=2038887058]
+layout_mode = 0
+offset_left = 34.0
+offset_right = 286.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0.74, 1, 0.9696667, 1)
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+vertical_alignment = 1
+
+[node name="ShutDownButton" type="TextureButton" parent="HBoxContainer" unique_id=732735356]
+layout_mode = 2
+texture_normal = ExtResource("7_2umfo")
+texture_pressed = ExtResource("8_5wabf")
+texture_hover = ExtResource("9_xkgnj")
+texture_disabled = ExtResource("10_e04ke")
+texture_focused = ExtResource("9_xkgnj")
+
+[node name="Label" type="Label" parent="HBoxContainer/ShutDownButton" unique_id=1824505435]
+layout_mode = 0
+offset_left = 34.0
+offset_right = 286.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0.74, 1, 0.9696667, 1)
+theme_override_font_sizes/font_size = 32
+text = "Shut 
+Down"
+vertical_alignment = 1
+
+[connection signal="pressed" from="HBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/ShutDownButton" to="." method="_on_shut_down_button_pressed"]

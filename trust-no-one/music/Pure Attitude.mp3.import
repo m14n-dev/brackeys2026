@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dblroj0x3nbm7"
+path="res://.godot/imported/Pure Attitude.mp3-56b4b5d744069921278d932e47954325.mp3str"
+
+[deps]
+
+source_file="res://music/Pure Attitude.mp3"
+dest_files=["res://.godot/imported/Pure Attitude.mp3-56b4b5d744069921278d932e47954325.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

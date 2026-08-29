@@ -2,11 +2,13 @@
 class_name Arena
 extends Node2D
 
+@export var next_level: PackedScene
+
 var is_game_over: bool = false
 var is_game_won: bool = false
 var game_over_time: float = 0
 
-var game_over_label_text = "[>] ERROR: 
+var game_over_label_text = "ERROR: 
 NO RESPONSE
 FROM [::1] 
 FOR %d SECONDS"
@@ -22,9 +24,11 @@ func _process(delta):
 		return
 	elif get_servers_by_faction(0).size() == 0:
 		$GameOverLabel.visible = true
+		$GameOverMenus.visible = true
 		is_game_over = true
 	elif is_all_enemies_gone():
 		$GameWonLabel.visible = true
+		$GameWonMenus.visible = true
 		is_game_won = true
 	
 func is_all_enemies_gone():
@@ -111,3 +115,18 @@ func collect_game_state() -> GameState:
 		state.by_id[pkg.faction].total_power += pkg.power
 		
 	return state
+
+
+func _on_retry_button_pressed():
+	get_tree().reload_current_scene()
+
+
+func _on_return_button_pressed():
+	get_tree().change_scene_to_file("res://menus/LevelSelectScreen.tscn")
+
+
+func _on_next_button_pressed():
+	if next_level != null:
+		get_tree().change_scene_to_packed(next_level)
+	else:
+		get_tree().change_scene_to_file("res://menus/CreditScreen.tscn")
