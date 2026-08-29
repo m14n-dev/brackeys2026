@@ -62,7 +62,7 @@ id = 1
 color = Color(0.77, 0.48509997, 0.5135899, 1)
 
 [node name="PlayerServerA" parent="." unique_id=1404967565 instance=ExtResource("6_maffh")]
-position = Vector2(142, 38)
+position = Vector2(142, 90)
 growth = 4.0
 
 [node name="ConnectionAto1" parent="." unique_id=1579168215 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("7_vkel1")]
@@ -85,7 +85,8 @@ position = Vector2(207, 127)
 position = Vector2(428, 255)
 
 [node name="EnemyServer1" parent="." unique_id=1591144704 instance=ExtResource("6_maffh")]
-position = Vector2(519, 255)
+position = Vector2(521, 309)
+scale = Vector2(0.8, 0.8)
 faction_id = 1
 
 [node name="Connection1to4" parent="." unique_id=971984494 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("7_vkel1")]
@@ -127,19 +128,23 @@ position = Vector2(454, 510)
 position = Vector2(598, 593)
 
 [node name="EnemyServer2" parent="." unique_id=124066517 instance=ExtResource("6_maffh")]
-position = Vector2(806, 255)
+position = Vector2(805, 310)
+scale = Vector2(0.8, 0.8)
 faction_id = 1
 
 [node name="EnemyServer3" parent="." unique_id=82061437 instance=ExtResource("6_maffh")]
-position = Vector2(935, 331)
+position = Vector2(923, 379)
+scale = Vector2(0.8, 0.8)
 faction_id = 1
 
 [node name="EnemyServer4" parent="." unique_id=1316788121 instance=ExtResource("6_maffh")]
-position = Vector2(520, 421)
+position = Vector2(521, 475)
+scale = Vector2(0.8, 0.8)
 faction_id = 1
 
 [node name="EnemyServer5" parent="." unique_id=1709299274 instance=ExtResource("6_maffh")]
-position = Vector2(663, 502)
+position = Vector2(663, 556)
+scale = Vector2(0.8, 0.8)
 faction_id = 1
 
 [node name="Connection1to2" parent="." unique_id=1289456471 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("7_vkel1")]
