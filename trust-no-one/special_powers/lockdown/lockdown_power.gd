@@ -11,3 +11,8 @@ func on_server_clicked(source: Server):
 		source.lockdown = true
 		source.lockdown_duration = duration
 		unselect()
+
+func get_eligible_servers() -> Array[Server]:
+	var res: Array[Server]
+	res.assign(get_tree().get_nodes_in_group("server"))
+	return res

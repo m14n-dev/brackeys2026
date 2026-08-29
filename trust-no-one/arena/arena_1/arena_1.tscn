@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://bpp8r1vb02pwm"]
 
 [ext_resource type="PackedScene" uid="uid://dovf0uuhggboa" path="res://arena/Arena.tscn" id="1_2uysh"]
+[ext_resource type="Script" uid="uid://c78vxh5od36um" path="res://arena/arena_1/Arena1.gd" id="1_trvc3"]
 [ext_resource type="PackedScene" uid="uid://chkhsfigpcb2c" path="res://arena/arena_2/arena_2.tscn" id="2_d8tdr"]
 [ext_resource type="PackedScene" uid="uid://djhky8qb4vngw" path="res://connection/Connection.tscn" id="2_rlj3j"]
 [ext_resource type="Texture2D" uid="uid://ehggjbg2qso7" path="res://arena/arena_1/connection_1.png" id="3_jnkxs"]
 [ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="4_kywog"]
 [ext_resource type="Script" uid="uid://b2nvw43nnbirl" path="res://arena/Faction.gd" id="5_rlj3j"]
+[ext_resource type="Texture2D" uid="uid://dsuevj0m1rm4r" path="res://arena/arena_1/onboard_sprite_a.png" id="5_t15d2"]
 [ext_resource type="Script" uid="uid://bog5gmtmfmy4p" path="res://ai/EnemyAi.gd" id="6_jnkxs"]
+[ext_resource type="Texture2D" uid="uid://n0edirrrkp5n" path="res://arena/arena_1/onboard_sprite_b.png" id="6_trvc3"]
 [ext_resource type="Script" uid="uid://ca3rj0thvcik6" path="res://ai/AiBehavior.gd" id="7_kywog"]
 
 [sub_resource type="Curve2D" id="Curve2D_xj7g1"]
@@ -15,11 +18,26 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_4d4sq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_t15d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_trvc3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 1.0
+}]
+
 [sub_resource type="Resource" id="Resource_jnkxs"]
 script = ExtResource("7_kywog")
 metadata/_custom_type_script = "uid://ca3rj0thvcik6"
 
 [node name="Arena1" type="Node2D" unique_id=52630319]
+script = ExtResource("1_trvc3")
 
 [node name="Arena" parent="." unique_id=109013526 instance=ExtResource("1_2uysh")]
 next_level = ExtResource("2_d8tdr")
@@ -41,6 +59,10 @@ curve = SubResource("Curve2D_xj7g1")
 
 [node name="PortA" parent="Connection" index="2" unique_id=954255240]
 position = Vector2(-97, 56)
+
+[node name="OnboardingSprite" type="AnimatedSprite2D" parent="Connection/PortA" index="3" unique_id=1887443005]
+sprite_frames = SubResource("SpriteFrames_4d4sq")
+frame_progress = 0.245275
 
 [node name="PortB" parent="Connection" index="3" unique_id=706148699]
 position = Vector2(124, -74)
@@ -66,5 +88,7 @@ script = ExtResource("6_jnkxs")
 behavior = SubResource("Resource_jnkxs")
 id = 1
 color = Color(0.77, 0.48509997, 0.5135899, 1)
+
+[connection signal="clicked" from="Connection/PortA" to="." method="_on_port_a_clicked"]
 
 [editable path="Connection"]

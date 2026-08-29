@@ -62,15 +62,20 @@ func on_this_button_pressed():
 func on_any_button_pressed(source):
 	if(source != self && currently_selected):
 		unselect()
+		
+func get_eligible_servers() -> Array[Server]:
+	return []
 
 func select():
 	currently_selected = true
-	#TODO: animation and such feedback stuff
+	for server in get_eligible_servers():
+		server.get_node("Sprite/selector_sprite").visible = true
 
 func unselect():
 	currently_selected = false
 	button.button_pressed = false;
-	#TODO: animation and such feedback stuff
+	for server in get_eligible_servers():
+		server.get_node("Sprite/selector_sprite").visible = false
 
 func activate():
 	state_remaining_duration = duration
