@@ -2,9 +2,14 @@
 
 [ext_resource type="Script" uid="uid://cwajms2nykuxs" path="res://port/Port.gd" id="1_211fk"]
 [ext_resource type="Texture2D" uid="uid://nhp7sgve4mhd" path="res://port/port.png" id="1_dpqal"]
+[ext_resource type="AudioStream" uid="uid://be3hjmrxe5ts6" path="res://port/activate_port.mp3" id="2_t1gn5"]
+[ext_resource type="AudioStream" uid="uid://b3mmniee482em" path="res://port/deactivate_port.mp3" id="3_6r7wu"]
 
-[node name="Port" type="Area2D" unique_id=954255240]
+[node name="Port" type="Area2D" unique_id=954255240 node_paths=PackedStringArray("audio_player")]
 script = ExtResource("1_211fk")
+audio_player = NodePath("AudioStreamPlayer2D")
+activate_sound = ExtResource("2_t1gn5")
+deactivate_sound = ExtResource("3_6r7wu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1218051130]
 texture = ExtResource("1_dpqal")
@@ -12,3 +17,5 @@ texture = ExtResource("1_dpqal")
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=253898275]
 position = Vector2(-0.5, -1)
 polygon = PackedVector2Array(-13.5, 1, 0.5, 10, 15.5, 1, 0.5, -8)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=895664682]

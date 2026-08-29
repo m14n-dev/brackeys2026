@@ -11,10 +11,15 @@ var speed_px_per_sec: float = 0
 var dest: Server
 var player_owned: bool
 
+@export var audioPlayer: AudioStreamPlayer2D
+@export var spawnAudio: AudioStreamMP3
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("package")
 	add_to_group("package_%d")
+	audioPlayer.stream = spawnAudio
+	audioPlayer.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

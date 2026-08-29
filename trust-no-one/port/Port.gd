@@ -11,12 +11,21 @@ signal clicked
 	set(val):
 		online = val
 		$Sprite2D.visible = val
+		if online:
+			audio_player.stream = activate_sound
+		else:
+			audio_player.stream = deactivate_sound
+		audio_player.play()
 		
 var server: Server
 var connection: Connection
 var peer: Port
 var path: Path2D
 var time_since_last: float = 0
+
+@export var audio_player: AudioStreamPlayer2D
+@export var activate_sound: AudioStreamMP3
+@export var deactivate_sound: AudioStreamMP3
 
 func _ready() -> void:
 	$Sprite2D.visible = online

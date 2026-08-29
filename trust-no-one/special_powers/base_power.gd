@@ -2,6 +2,9 @@ class_name BasePower
 extends Node2D
 
 @export var button: Button
+@export var audio_player: AudioStreamPlayer2D
+@export var select_audio: AudioStreamMP3
+@export var unselect_audio: AudioStreamMP3
 
 var currently_selected: bool = false;
 
@@ -15,8 +18,11 @@ func on_this_button_pressed():
 	
 	if(!currently_selected):
 		select()
+		audio_player.stream = select_audio
 	else:
 		unselect()
+		audio_player.stream = unselect_audio
+	audio_player.play()
 
 func on_any_button_pressed(source):
 	if(source != self && currently_selected):

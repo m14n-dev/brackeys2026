@@ -15,10 +15,19 @@ signal on_package_recv(Server, Package)
 		
 @export var faction_id: int:
 	set(val):
+		var old_id: int = faction_id
+		
 		remove_from_group("server_%d" % [faction_id])
 		add_to_group("server_%d" % [val])
 		faction_id = val
 		update_faction_color()
+		
+		if(old_id != faction_id):
+			if(old_id == 0):
+				audioPlayer.stream = enemy_takeover_sound
+			elif(faction_id == 0):
+				audioPlayer.stream = player_takeover_sound
+		audioPlayer.play()
 
 
 var color: Color = Color.WHITE:
@@ -42,6 +51,11 @@ var lockdown_duration: float = 0
 
 var production_pause: bool = false # Powers can stop production temporarily
 var production_increase: bool = false # Powers can boost production temporarily
+
+@export var audioPlayer: AudioStreamPlayer2D
+@export var receive_package_sound: AudioStreamMP3
+@export var player_takeover_sound: AudioStreamMP3
+@export var enemy_takeover_sound: AudioStreamMP3
 
 func _get_configuration_warnings():
 	var warnings = []
@@ -102,6 +116,9 @@ func recv_package(package: Package):
 			self.player_owned = package.player_owned
 			for port in self.ports:
 				port.online = false
+	# The lines below made the soundscape too busy (Alder's opinion). Can be reactivated if needed.
+	# audioPlayer.stream = receive_package_sound
+	# audioPlayer.play()
 
 func click_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton:
