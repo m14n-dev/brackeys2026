@@ -28,9 +28,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="true"
-     inkscape:zoom="0.80878314"
-     inkscape:cx="3128.1562"
-     inkscape:cy="1061.4712"
+     inkscape:zoom="2.2875842"
+     inkscape:cx="3327.5278"
+     inkscape:cy="1748.7881"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -382,5 +382,46 @@
          d="m 873.0077,186.53124 2.29134,-1.32291 v -10.58334 l -2.29134,-1.32291 z"
          id="path51" />
     </g>
+    <path
+       style="fill:#bf9128;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 847.80275,463.0208 4.58272,-2.64583 -2.29135,-1.32292 -6.87409,3.96875 6.87409,3.96875 2.29135,-1.32292 z"
+       id="path52"
+       inkscape:export-filename="..\arena\arena_1\onboard_sprite_a.png"
+       inkscape:export-xdpi="28.799999"
+       inkscape:export-ydpi="28.799999" />
+    <path
+       style="fill:#bf9128;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 854.67684,459.05205 4.58271,-2.64583 4.58272,2.64583 2.29134,-1.32292 -6.87406,-3.96875 -6.87408,3.96875 z"
+       id="path53" />
+    <path
+       style="fill:#bf9128;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 866.13361,460.37497 2.29137,-1.32292 6.87406,3.96875 -6.87406,3.96875 -2.29137,-1.32292 4.58272,-2.64583 z"
+       id="path54" />
+    <path
+       style="fill:#bf9128;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 863.84227,466.98955 -4.58272,2.64583 -4.58271,-2.64583 -2.29137,1.32292 6.87408,3.96875 6.87406,-3.96875 z"
+       id="path55" />
+    <path
+       style="fill:#bf9128;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 889.04722,463.02082 4.58272,-2.64583 -2.29135,-1.32292 -6.87409,3.96875 6.87409,3.96875 2.29135,-1.32292 z"
+       id="path52-2"
+       inkscape:export-filename="..\arena\arena_1\onboard_sprite_a.png"
+       inkscape:export-xdpi="28.799999"
+       inkscape:export-ydpi="28.799999" />
+    <path
+       style="fill:#bf9128;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 900.50402,456.40623 4.58271,-2.64583 4.58272,2.64583 2.29134,-1.32292 -6.87406,-3.96875 -6.87408,3.96875 z"
+       id="path53-8"
+       inkscape:export-filename="..\arena\arena_1\onboard_sprite_B.png"
+       inkscape:export-xdpi="28.799999"
+       inkscape:export-ydpi="28.799999" />
+    <path
+       style="fill:#bf9128;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 916.54352,460.37499 2.29137,-1.32292 6.87406,3.96875 -6.87406,3.96875 -2.29137,-1.32292 4.58272,-2.64583 z"
+       id="path54-0" />
+    <path
+       style="fill:#bf9128;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 909.66945,469.6354 -4.58272,2.64583 -4.58271,-2.64583 -2.29137,1.32292 6.87408,3.96875 6.87406,-3.96875 z"
+       id="path55-1" />
   </g>
 </svg>

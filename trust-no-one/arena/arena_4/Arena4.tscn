@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bog5gmtmfmy4p" path="res://ai/EnemyAi.gd" id="3_lgt8t"]
 [ext_resource type="Script" uid="uid://eofjqqqc1t1u" path="res://ai/SmartAiBehavior.gd" id="4_qo3jw"]
 [ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="5_nbrnp"]
+[ext_resource type="Script" uid="uid://ca3rj0thvcik6" path="res://ai/AiBehavior.gd" id="5_qo3jw"]
 [ext_resource type="PackedScene" uid="uid://djhky8qb4vngw" path="res://connection/Connection.tscn" id="6_acyjt"]
 [ext_resource type="Texture2D" uid="uid://b4p3b0vekhvpv" path="res://arena/arena_4/connection_1.png" id="7_3lobk"]
 [ext_resource type="Texture2D" uid="uid://c5oq2iaxmhtr2" path="res://arena/arena_4/connection_4.png" id="8_g82bb"]
@@ -14,6 +15,10 @@
 [sub_resource type="Resource" id="Resource_qo3jw"]
 script = ExtResource("4_qo3jw")
 metadata/_custom_type_script = "uid://eofjqqqc1t1u"
+
+[sub_resource type="Resource" id="Resource_5taaq"]
+script = ExtResource("5_qo3jw")
+metadata/_custom_type_script = "uid://ca3rj0thvcik6"
 
 [sub_resource type="Curve2D" id="Curve2D_5taaq"]
 _data = {
@@ -51,7 +56,7 @@ color = Color(0.77, 0.48509997, 0.5135899, 1)
 [node name="Enemy2" type="Node2D" parent="." unique_id=343924147]
 position = Vector2(415, 409)
 script = ExtResource("3_lgt8t")
-behavior = SubResource("Resource_qo3jw")
+behavior = SubResource("Resource_5taaq")
 id = 2
 color = Color(0.5411765, 0.7529412, 0.87058824, 1)
 
