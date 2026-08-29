@@ -25,9 +25,10 @@ signal on_package_recv(Server, Package)
 		if(old_id != faction_id):
 			if(old_id == 0):
 				audioPlayer.stream = enemy_takeover_sound
+				audioPlayer.play()
 			elif(faction_id == 0):
 				audioPlayer.stream = player_takeover_sound
-		audioPlayer.play()
+				audioPlayer.play()
 
 
 var color: Color = Color.WHITE:
