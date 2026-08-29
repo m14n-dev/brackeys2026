@@ -11,11 +11,12 @@ signal clicked
 	set(val):
 		online = val
 		$Sprite2D.visible = val
-		if online:
-			audio_player.stream = activate_sound
-		else:
-			audio_player.stream = deactivate_sound
-		audio_player.play()
+		if server.faction_id == 0:
+			if online:
+				audio_player.stream = activate_sound
+			else:
+				audio_player.stream = deactivate_sound
+			audio_player.play()
 		
 var server: Server
 var connection: Connection

@@ -18,8 +18,9 @@ var player_owned: bool
 func _ready():
 	add_to_group("package")
 	add_to_group("package_%d")
-	audioPlayer.stream = spawnAudio
-	audioPlayer.play()
+	if(faction == 0):
+		audioPlayer.stream = spawnAudio
+		audioPlayer.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
