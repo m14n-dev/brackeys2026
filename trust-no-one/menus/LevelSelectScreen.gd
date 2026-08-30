@@ -31,6 +31,9 @@ func _on_lvl_4_button_pressed():
 func _on_lvl_5_button_pressed():
 	get_tree().change_scene_to_file("res://arena/arena_5/Arena5.tscn")
 
+func _on_lvl_6_button_pressed():
+	get_tree().change_scene_to_file("res://arena/arena_6/Arena6.tscn")
+
 
 func _on_lvl_1_button_mouse_entered():
 	pass # Replace with function body.

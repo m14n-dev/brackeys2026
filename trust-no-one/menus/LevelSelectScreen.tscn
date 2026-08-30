@@ -47,14 +47,14 @@ alignment = 1
 layout_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=23711427]
-offset_left = 116.0
+offset_left = 11.0
 offset_top = 75.0
-offset_right = 1036.0
+offset_right = 1135.0
 offset_bottom = 491.0
 size_flags_horizontal = 4
 theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
-columns = 5
+columns = 6
 
 [node name="Lvl1Button" parent="GridContainer" unique_id=1607381943 instance=ExtResource("7_givdt")]
 layout_mode = 2
@@ -93,6 +93,14 @@ size_flags_vertical = 6
 [node name="Label" parent="GridContainer/Lvl5Button/Container" parent_id_path=PackedInt32Array(70869977, 702484404) index="0" unique_id=1282349843]
 text = "5"
 
+[node name="Lvl6Button" parent="GridContainer" unique_id=1647497894 instance=ExtResource("7_givdt")]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Label" parent="GridContainer/Lvl6Button/Container" parent_id_path=PackedInt32Array(1647497894, 702484404) index="0" unique_id=1282349843]
+text = "6"
+
 [connection signal="pressed" from="HBoxContainer2/BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="mouse_entered" from="GridContainer/Lvl1Button" to="." method="_on_lvl_1_button_mouse_entered"]
 [connection signal="pressed" from="GridContainer/Lvl1Button" to="." method="_on_lvl_1_button_pressed"]
@@ -100,9 +108,11 @@ text = "5"
 [connection signal="pressed" from="GridContainer/Lvl3Button" to="." method="_on_lvl_3_button_pressed"]
 [connection signal="pressed" from="GridContainer/Lvl4Button" to="." method="_on_lvl_4_button_pressed"]
 [connection signal="pressed" from="GridContainer/Lvl5Button" to="." method="_on_lvl_5_button_pressed"]
+[connection signal="pressed" from="GridContainer/Lvl6Button" to="." method="_on_lvl_6_button_pressed"]
 
 [editable path="GridContainer/Lvl1Button"]
 [editable path="GridContainer/Lvl2Button"]
 [editable path="GridContainer/Lvl3Button"]
 [editable path="GridContainer/Lvl4Button"]
 [editable path="GridContainer/Lvl5Button"]
+[editable path="GridContainer/Lvl6Button"]

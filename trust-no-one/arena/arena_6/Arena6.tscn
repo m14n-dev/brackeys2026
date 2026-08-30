@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://s30mwk7oraea"]
 
 [ext_resource type="PackedScene" uid="uid://dovf0uuhggboa" path="res://arena/Arena.tscn" id="1_uonr3"]
-[ext_resource type="Texture2D" uid="uid://dh1l5apdnwtao" path="res://arena/arena_6/arena_6.png" id="2_kod0d"]
 [ext_resource type="Script" uid="uid://b2nvw43nnbirl" path="res://arena/Faction.gd" id="3_twlfw"]
 [ext_resource type="Script" uid="uid://bog5gmtmfmy4p" path="res://ai/EnemyAi.gd" id="4_qobja"]
 [ext_resource type="Script" uid="uid://ca3rj0thvcik6" path="res://ai/AiBehavior.gd" id="5_y0bn5"]
-[ext_resource type="Script" uid="uid://eofjqqqc1t1u" path="res://ai/SmartAiBehavior.gd" id="6_qobja"]
 [ext_resource type="Script" uid="uid://b4aeq7ah88bh1" path="res://ai/AllOutAiBehavior.gd" id="7_y0bn5"]
 [ext_resource type="Script" uid="uid://3yvav4q5ks4v" path="res://ai/RetributionAiBehavior.gd" id="8_q0mk0"]
 [ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="9_7pqqm"]
@@ -13,14 +11,36 @@
 [ext_resource type="Texture2D" uid="uid://djx765yr6x4tc" path="res://arena/arena_6/conn_a1_a2.png" id="11_3ttsm"]
 [ext_resource type="Texture2D" uid="uid://davdc5iojlsc2" path="res://arena/arena_6/conn_a1_a3.png" id="12_3ttsm"]
 [ext_resource type="Texture2D" uid="uid://7qemt83qao7j" path="res://arena/arena_6/conn_a2_a3.png" id="13_ee6xw"]
+[ext_resource type="Texture2D" uid="uid://r3efff43tg6h" path="res://arena/arena_6/conn_b2_a2.png" id="14_0ynhl"]
+[ext_resource type="Texture2D" uid="uid://cqkdwclnvnker" path="res://arena/arena_6/conn_a2_center.png" id="15_djsq4"]
+[ext_resource type="Texture2D" uid="uid://cr0lhpnvan40b" path="res://arena/arena_6/conn_a1_b1.png" id="16_r53tr"]
+[ext_resource type="Texture2D" uid="uid://r4udmg0k2xky" path="res://arena/arena_6/conn_a1_c1.png" id="17_58gv1"]
+[ext_resource type="Texture2D" uid="uid://dc0jbuuy7nfbm" path="res://arena/arena_6/conn_a3_center.png" id="18_5ptxe"]
+[ext_resource type="Texture2D" uid="uid://d1r02f8chex4t" path="res://arena/arena_6/conn_a3_c2.png" id="19_iol8e"]
+[ext_resource type="Texture2D" uid="uid://b6fqdg5l232ti" path="res://arena/arena_6/conn_c1_c2.png" id="20_8mrf2"]
+[ext_resource type="Texture2D" uid="uid://dp71qivqy1di" path="res://arena/arena_6/conn_c2_c3.png" id="21_iol8e"]
+[ext_resource type="Texture2D" uid="uid://652enpbm0bi7" path="res://arena/arena_6/conn_c2_center.png" id="22_8mrf2"]
+[ext_resource type="Texture2D" uid="uid://btm071v1nfjkt" path="res://arena/arena_6/conn_c1_c3.png" id="23_qmkm7"]
+[ext_resource type="Texture2D" uid="uid://xd1jx7cwe7e5" path="res://arena/arena_6/conn_b3_c3.png" id="24_nb5q6"]
+[ext_resource type="Texture2D" uid="uid://clsspfrkyrr6g" path="res://arena/arena_6/conn_c3_center.png" id="25_kywai"]
+[ext_resource type="Texture2D" uid="uid://cm4c1m3s3jb5a" path="res://arena/arena_6/conn_b2_b3.png" id="26_25qef"]
+[ext_resource type="Texture2D" uid="uid://ca1412q332u4b" path="res://arena/arena_6/conn_b1_b3.png" id="27_liwy3"]
+[ext_resource type="Texture2D" uid="uid://dmlwbf8uq0hj5" path="res://arena/arena_6/conn_b3_center.png" id="28_0c2ka"]
+[ext_resource type="Texture2D" uid="uid://dtqgp3ksd3yje" path="res://arena/arena_6/conn_b1_b2.png" id="29_excui"]
+[ext_resource type="Texture2D" uid="uid://dw06lnm25ac0k" path="res://arena/arena_6/conn_b2_center.png" id="30_1mbou"]
+[ext_resource type="PackedScene" uid="uid://dx27omxdqacou" path="res://special_powers/lockdown/lockdown_power.tscn" id="31_4mwqx"]
+[ext_resource type="Texture2D" uid="uid://dx8km1cpic13k" path="res://arena/arena_6/conn_b1_c1.png" id="31_gbmko"]
+[ext_resource type="PackedScene" uid="uid://cqa8idrk6lm2a" path="res://special_powers/pause/pause_power.tscn" id="32_hi7d0"]
+[ext_resource type="PackedScene" uid="uid://b3nek1vcj1gw5" path="res://special_powers/disguise/disguise_power.tscn" id="33_25auj"]
+[ext_resource type="PackedScene" uid="uid://dcmcxvn674xqp" path="res://special_powers/boost/boost_power.tscn" id="34_0ksvx"]
 
 [sub_resource type="Resource" id="Resource_xr3i8"]
 script = ExtResource("5_y0bn5")
 metadata/_custom_type_script = "uid://ca3rj0thvcik6"
 
-[sub_resource type="Resource" id="Resource_ov7y0"]
-script = ExtResource("6_qobja")
-metadata/_custom_type_script = "uid://eofjqqqc1t1u"
+[sub_resource type="Resource" id="Resource_0f4l1"]
+script = ExtResource("7_y0bn5")
+metadata/_custom_type_script = "uid://b4aeq7ah88bh1"
 
 [sub_resource type="Resource" id="Resource_n7qge"]
 script = ExtResource("7_y0bn5")
@@ -48,12 +68,120 @@ _data = {
 }
 point_count = 4
 
+[sub_resource type="Curve2D" id="Curve2D_djsq4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 194, 99, 0, 0, 0, 0, 97, 44, 0, 0, 0, 0, 96, 22, 0, 0, 0, 0, 129, 1)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_r53tr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 118, 70, 0, 0, 0, 0, 183, 32)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_58gv1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 183, 258, 0, 0, 0, 0, 149, 277, 0, 0, 0, 0, 112, 277, 0, 0, 0, 0, -280, 51, 0, 0, 0, 0, -279, -136, 0, 0, 0, 0, -182, -193)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_8wg1g"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -269, 257, 0, 0, 0, 0, -234, 278, 0, 0, 0, 0, -199, 276, 0, 0, 0, 0, 194, 50, 0, 0, 0, 0, 192, -136, 0, 0, 0, 0, 94, -193)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_qmkm7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 25, 77, 0, 0, 0, 0, -40, 38)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_nb5q6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -50, 106, 0, 0, 0, 0, 48, 50, 0, 0, 0, 0, 46, 28, 0, 0, 0, 0, 14, 9)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_kywai"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -32, 95, 0, 0, 0, 0, 26, 62, 0, 0, 0, 0, 27, 39, 0, 0, 0, 0, -5, 20)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_8mrf2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 26, 76, 0, 0, 0, 0, -40, 39)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_25qef"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 72, 56, 0, 0, 0, 0, 41, 73, 0, 0, 0, 0, 20, 72, 0, 0, 0, 0, -28, 43, 0, 0, 0, 0, -65, 43, 0, 0, 0, 0, -86, 56)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_liwy3"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -77, 41, 0, 0, 0, 0, -51, 42, 0, 0, 0, 0, 12, 78, 0, 0, 0, 0, 37, 79, 0, 0, 0, 0, 66, 64)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_0c2ka"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 20, 55, 0, 0, 0, 0, 1, 65, 0, 0, 0, 0, -14, 66, 0, 0, 0, 0, -33, 55)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_excui"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1, 16, 0, 0, 0, 0, 34, 37, 0, 0, 0, 0, 33, 58, 0, 0, 0, 0, -38, 99)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_1mbou"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 25, 39, 0, 0, 0, 0, -39, 77)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_gbmko"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 64, 41, 0, 0, 0, 0, 38, 41, 0, 0, 0, 0, -25, 79, 0, 0, 0, 0, -52, 80, 0, 0, 0, 0, -78, 64)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_4mwqx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -16, 16, 0, 0, 0, 0, -48, 36, 0, 0, 0, 0, -48, 57, 0, 0, 0, 0, 24, 100)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_hi7d0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 18, 96, 0, 0, 0, 0, -41, 62, 0, 0, 0, 0, -42, 40, 0, 0, 0, 0, -8, 20)
+}
+point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_0ksvx"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -86, 55, 0, 0, 0, 0, -56, 73, 0, 0, 0, 0, -36, 72, 0, 0, 0, 0, 16, 42, 0, 0, 0, 0, 49, 43, 0, 0, 0, 0, 71, 56)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_25auj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -280, 65, 0, 0, 0, 0, -246, 45, 0, 0, 0, 0, 232, 46, 0, 0, 0, 0, 266, 66)
+}
+point_count = 4
+
 [node name="Arena6" type="Node2D" unique_id=1342764802]
 
 [node name="Arena" parent="." unique_id=109013526 instance=ExtResource("1_uonr3")]
 
-[node name="Background" parent="Arena" index="0" unique_id=848387431]
-texture = ExtResource("2_kod0d")
+[node name="NextButton" parent="Arena/GameWonMenus" parent_id_path=PackedInt32Array(109013526, 573629034) index="0" unique_id=853641123]
+visible = false
 
 [node name="Player" type="Node2D" parent="." unique_id=395883782]
 position = Vector2(576, 324)
@@ -68,7 +196,7 @@ color = Color(1, 1, 1, 1)
 
 [node name="SmartAI" type="Node2D" parent="." unique_id=1089149414]
 script = ExtResource("4_qobja")
-behavior = SubResource("Resource_ov7y0")
+behavior = SubResource("Resource_0f4l1")
 id = 2
 color = Color(0.5411765, 0.7529412, 0.87058824, 1)
 
@@ -183,28 +311,436 @@ position = Vector2(247, 38)
 [node name="PortB" parent="A1toA3" index="3" unique_id=706148699]
 position = Vector2(312, 0)
 
-[node name="Connection" parent="." unique_id=724696252 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+[node name="A2toA3" parent="." unique_id=724696252 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
 z_index = -1
 position = Vector2(415, 472)
 point_a = NodePath("../A2")
 point_b = NodePath("../A3")
 max_package_size = 10
 
-[node name="Sprite2D" parent="Connection" index="0" unique_id=343096505]
+[node name="Sprite2D" parent="A2toA3" index="0" unique_id=343096505]
 position = Vector2(157, -8)
 texture = ExtResource("13_ee6xw")
 
-[node name="PathAtoB" parent="Connection" index="1" unique_id=860685861]
+[node name="PathAtoB" parent="A2toA3" index="1" unique_id=860685861]
 position = Vector2(27, -16)
 curve = SubResource("Curve2D_0ynhl")
 
-[node name="PortA" parent="Connection" index="2" unique_id=954255240]
+[node name="PortA" parent="A2toA3" index="2" unique_id=954255240]
 position = Vector2(27, -16)
 
-[node name="PortB" parent="Connection" index="3" unique_id=706148699]
+[node name="PortB" parent="A2toA3" index="3" unique_id=706148699]
 position = Vector2(287, -15)
+
+[node name="A2toB2" parent="." unique_id=1070256733 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(98, 349)
+point_a = NodePath("../A2")
+point_b = NodePath("../B2")
+max_package_size = 10
+
+[node name="Sprite2D" parent="A2toB2" index="0" unique_id=343096505]
+position = Vector2(157, -8)
+texture = ExtResource("14_0ynhl")
+
+[node name="PathAtoB" parent="A2toB2" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_djsq4")
+
+[node name="PortA" parent="A2toB2" index="2" unique_id=954255240]
+position = Vector2(201, 40)
+
+[node name="PortB" parent="A2toB2" index="3" unique_id=706148699]
+position = Vector2(136, -57)
+
+[node name="A2toCenter" parent="." unique_id=1869761300 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(330, 379)
+point_a = NodePath("../A2")
+point_b = NodePath("../Center")
+max_package_size = 10
+
+[node name="Sprite2D" parent="A2toCenter" index="0" unique_id=343096505]
+position = Vector2(157, -8)
+texture = ExtResource("15_djsq4")
+
+[node name="PathAtoB" parent="A2toCenter" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_r53tr")
+
+[node name="PortA" parent="A2toCenter" index="2" unique_id=954255240]
+position = Vector2(125, 11)
+
+[node name="PortB" parent="A2toCenter" index="3" unique_id=706148699]
+position = Vector2(190, -27)
+
+[node name="A1toAiB" parent="." unique_id=1257275988 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(330, 379)
+point_a = NodePath("../PlayerA")
+point_b = NodePath("../AiB")
+max_package_size = 10
+
+[node name="Sprite2D" parent="A1toAiB" index="0" unique_id=343096505]
+position = Vector2(-36, -19)
+texture = ExtResource("16_r53tr")
+
+[node name="PathAtoB" parent="A1toAiB" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_58gv1")
+
+[node name="PortA" parent="A1toAiB" index="2" unique_id=954255240]
+position = Vector2(190, 199)
+
+[node name="PortB" parent="A1toAiB" index="3" unique_id=706148699]
+position = Vector2(-174, -252)
+
+[node name="A1toAiC" parent="." unique_id=775366831 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(886, 377)
+point_a = NodePath("../PlayerA")
+point_b = NodePath("../AiC")
+max_package_size = 10
+
+[node name="Sprite2D" parent="A1toAiC" index="0" unique_id=343096505]
+position = Vector2(-36, -19)
+texture = ExtResource("17_58gv1")
+
+[node name="PathAtoB" parent="A1toAiC" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_8wg1g")
+
+[node name="PortA" parent="A1toAiC" index="2" unique_id=954255240]
+position = Vector2(-262, 198)
+
+[node name="PortB" parent="A1toAiC" index="3" unique_id=706148699]
+position = Vector2(101, -252)
+
+[node name="A3toCenter" parent="." unique_id=1279726995 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(657, 372)
+point_a = NodePath("../A3")
+point_b = NodePath("../Center")
+max_package_size = 10
+
+[node name="Sprite2D" parent="A3toCenter" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("18_5ptxe")
+
+[node name="PathAtoB" parent="A3toCenter" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_qmkm7")
+
+[node name="PortA" parent="A3toCenter" index="2" unique_id=954255240]
+position = Vector2(32, 18)
+
+[node name="PortB" parent="A3toCenter" index="3" unique_id=706148699]
+position = Vector2(-33, -21)
+
+[node name="A3toC2" parent="." unique_id=463154737 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(888, 342)
+point_a = NodePath("../A3")
+point_b = NodePath("../C2")
+max_package_size = 10
+
+[node name="Sprite2D" parent="A3toC2" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("19_iol8e")
+
+[node name="PathAtoB" parent="A3toC2" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_nb5q6")
+
+[node name="PortA" parent="A3toC2" index="2" unique_id=954255240]
+position = Vector2(-44, 47)
+
+[node name="PortB" parent="A3toC2" index="3" unique_id=706148699]
+position = Vector2(21, -50)
+
+[node name="C2toAiC" parent="." unique_id=1209139542 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(961, 181)
+point_a = NodePath("../C2")
+point_b = NodePath("../AiC")
+max_package_size = 10
+
+[node name="Sprite2D" parent="C2toAiC" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("20_8mrf2")
+
+[node name="PathAtoB" parent="C2toAiC" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_kywai")
+
+[node name="PortA" parent="C2toAiC" index="2" unique_id=954255240]
+position = Vector2(-25, 36)
+
+[node name="PortB" parent="C2toAiC" index="3" unique_id=706148699]
+position = Vector2(1, -39)
+
+[node name="C2toC3" parent="." unique_id=856619575 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(747, 185)
+point_a = NodePath("../C2")
+point_b = NodePath("../C3")
+max_package_size = 10
+
+[node name="Sprite2D" parent="C2toC3" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("21_iol8e")
+
+[node name="PathAtoB" parent="C2toC3" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_8mrf2")
+
+[node name="PortA" parent="C2toC3" index="2" unique_id=954255240]
+position = Vector2(33, 18)
+
+[node name="PortB" parent="C2toC3" index="3" unique_id=706148699]
+position = Vector2(-33, -20)
+
+[node name="C2toCenter" parent="." unique_id=67481383 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(728, 296)
+point_a = NodePath("../C2")
+point_b = NodePath("../Center")
+max_package_size = 10
+
+[node name="Sprite2D" parent="C2toCenter" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("22_8mrf2")
+
+[node name="PathAtoB" parent="C2toCenter" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_25qef")
+
+[node name="PortA" parent="C2toCenter" index="2" unique_id=954255240]
+position = Vector2(78, -3)
+
+[node name="PortB" parent="C2toCenter" index="3" unique_id=706148699]
+position = Vector2(-78, -3)
+
+[node name="C3toAiC" parent="." unique_id=908225506 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(798, 130)
+point_a = NodePath("../C3")
+point_b = NodePath("../AiC")
+max_package_size = 10
+
+[node name="Sprite2D" parent="C3toAiC" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("23_qmkm7")
+
+[node name="PathAtoB" parent="C3toAiC" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_liwy3")
+
+[node name="PortA" parent="C3toAiC" index="2" unique_id=954255240]
+position = Vector2(-71, -18)
+
+[node name="PortB" parent="C3toAiC" index="3" unique_id=706148699]
+position = Vector2(72, 5)
+
+[node name="C3toB3" parent="." unique_id=467757787 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(572, 177)
+point_a = NodePath("../C3")
+point_b = NodePath("../B3")
+max_package_size = 10
+
+[node name="Sprite2D" parent="C3toB3" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("24_nb5q6")
+
+[node name="PathAtoB" parent="C3toB3" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_0c2ka")
+
+[node name="PortA" parent="C3toB3" index="2" unique_id=954255240]
+position = Vector2(27, -4)
+
+[node name="PortB" parent="C3toB3" index="3" unique_id=706148699]
+position = Vector2(-26, -4)
+
+[node name="C3toCenter" parent="." unique_id=1664928906 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(681, 222)
+point_a = NodePath("../C3")
+point_b = NodePath("../Center")
+max_package_size = 10
+
+[node name="Sprite2D" parent="C3toCenter" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("25_kywai")
+
+[node name="PathAtoB" parent="C3toCenter" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_excui")
+
+[node name="PortA" parent="C3toCenter" index="2" unique_id=954255240]
+position = Vector2(8, -43)
+
+[node name="PortB" parent="C3toCenter" index="3" unique_id=706148699]
+position = Vector2(-31, 40)
+
+[node name="B3toB2" parent="." unique_id=2029930860 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(397, 185)
+point_a = NodePath("../B3")
+point_b = NodePath("../B2")
+max_package_size = 10
+
+[node name="Sprite2D" parent="B3toB2" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("26_25qef")
+
+[node name="PathAtoB" parent="B3toB2" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_1mbou")
+
+[node name="PortA" parent="B3toB2" index="2" unique_id=954255240]
+position = Vector2(32, -20)
+
+[node name="PortB" parent="B3toB2" index="3" unique_id=706148699]
+position = Vector2(-32, 18)
+
+[node name="B3toAiB" parent="." unique_id=508442285 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(344, 130)
+point_a = NodePath("../B3")
+point_b = NodePath("../AiB")
+max_package_size = 10
+
+[node name="Sprite2D" parent="B3toAiB" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("27_liwy3")
+
+[node name="PathAtoB" parent="B3toAiB" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_gbmko")
+
+[node name="PortA" parent="B3toAiB" index="2" unique_id=954255240]
+position = Vector2(71, -18)
+
+[node name="PortB" parent="B3toAiB" index="3" unique_id=706148699]
+position = Vector2(-71, 5)
+
+[node name="B3toCenter" parent="." unique_id=411801138 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(463, 222)
+point_a = NodePath("../B3")
+point_b = NodePath("../Center")
+max_package_size = 10
+
+[node name="Sprite2D" parent="B3toCenter" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("28_0c2ka")
+
+[node name="PathAtoB" parent="B3toCenter" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_4mwqx")
+
+[node name="PortA" parent="B3toCenter" index="2" unique_id=954255240]
+position = Vector2(-9, -43)
+
+[node name="PortB" parent="B3toCenter" index="3" unique_id=706148699]
+position = Vector2(31, 41)
+
+[node name="B2toAiB" parent="." unique_id=1413242147 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(183, 181)
+point_a = NodePath("../B2")
+point_b = NodePath("../AiB")
+max_package_size = 10
+
+[node name="Sprite2D" parent="B2toAiB" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("29_excui")
+
+[node name="PathAtoB" parent="B2toAiB" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_hi7d0")
+
+[node name="PortA" parent="B2toAiB" index="2" unique_id=954255240]
+position = Vector2(25, 37)
+
+[node name="PortB" parent="B2toAiB" index="3" unique_id=706148699]
+position = Vector2(-1, -39)
+
+[node name="B2toCenter" parent="." unique_id=1672323514 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(416, 296)
+point_a = NodePath("../B2")
+point_b = NodePath("../Center")
+max_package_size = 10
+
+[node name="Sprite2D" parent="B2toCenter" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("30_1mbou")
+
+[node name="PathAtoB" parent="B2toCenter" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_0ksvx")
+
+[node name="PortA" parent="B2toCenter" index="2" unique_id=954255240]
+position = Vector2(-79, -4)
+
+[node name="PortB" parent="B2toCenter" index="3" unique_id=706148699]
+position = Vector2(78, -3)
+
+[node name="AiBtoAiC" parent="." unique_id=1007910983 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(572, 53)
+point_a = NodePath("../AiB")
+point_b = NodePath("../AiC")
+max_package_size = 10
+
+[node name="Sprite2D" parent="AiBtoAiC" index="0" unique_id=343096505]
+position = Vector2(0, -1)
+texture = ExtResource("31_gbmko")
+
+[node name="PathAtoB" parent="AiBtoAiC" index="1" unique_id=860685861]
+position = Vector2(7, -59)
+curve = SubResource("Curve2D_25auj")
+
+[node name="PortA" parent="AiBtoAiC" index="2" unique_id=954255240]
+position = Vector2(-273, 6)
+
+[node name="PortB" parent="AiBtoAiC" index="3" unique_id=706148699]
+position = Vector2(273, 7)
+
+[node name="LockdownPower" parent="." unique_id=1298012714 instance=ExtResource("31_4mwqx")]
+position = Vector2(0, 575)
+
+[node name="PausePower" parent="." unique_id=349183201 instance=ExtResource("32_hi7d0")]
+position = Vector2(0, 496)
+
+[node name="DisguisePower" parent="." unique_id=1966802492 instance=ExtResource("33_25auj")]
+position = Vector2(0, 417)
+
+[node name="BoostPower" parent="." unique_id=20844576 instance=ExtResource("34_0ksvx")]
+position = Vector2(200, 576)
 
 [editable path="Arena"]
 [editable path="A1toA2"]
 [editable path="A1toA3"]
-[editable path="Connection"]
+[editable path="A2toA3"]
+[editable path="A2toB2"]
+[editable path="A2toCenter"]
+[editable path="A1toAiB"]
+[editable path="A1toAiC"]
+[editable path="A3toCenter"]
+[editable path="A3toC2"]
+[editable path="C2toAiC"]
+[editable path="C2toC3"]
+[editable path="C2toCenter"]
+[editable path="C3toAiC"]
+[editable path="C3toB3"]
+[editable path="C3toCenter"]
+[editable path="B3toB2"]
+[editable path="B3toAiB"]
+[editable path="B3toCenter"]
+[editable path="B2toAiB"]
+[editable path="B2toCenter"]
+[editable path="AiBtoAiC"]
