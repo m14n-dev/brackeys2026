@@ -74,7 +74,7 @@ position = Vector2(415, 409)
 script = ExtResource("3_lgt8t")
 behavior = SubResource("Resource_0e8rg")
 id = 1
-color = Color(0.77, 0.48509997, 0.5135899, 1)
+color = Color(0.76862746, 0.4862745, 0.5137255, 1)
 
 [node name="Enemy2" type="Node2D" parent="." unique_id=343924147]
 position = Vector2(415, 409)
