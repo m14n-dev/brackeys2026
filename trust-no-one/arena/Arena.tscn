@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://0qgcjameaa3o" path="res://ui/button_pressed.png" id="7_us1c4"]
 [ext_resource type="Texture2D" uid="uid://8vyu5l5y1d5a" path="res://ui/button_focus.png" id="8_s00uq"]
 [ext_resource type="Texture2D" uid="uid://caaqyf056jw40" path="res://ui/button_disabled.png" id="9_1mwsf"]
+[ext_resource type="AudioStream" uid="uid://df84fy4a5uf37" path="res://arena/sounds/victory_sound.mp3" id="10_s00uq"]
+[ext_resource type="AudioStream" uid="uid://cw7xngirlujrq" path="res://arena/sounds/lose_sound.mp3" id="11_1mwsf"]
 
 [node name="Arena" type="Node2D" unique_id=109013526]
 script = ExtResource("1_7pan0")
@@ -148,6 +150,14 @@ theme_override_colors/font_color = Color(0.74, 1, 0.9696667, 1)
 theme_override_font_sizes/font_size = 32
 text = "Return"
 vertical_alignment = 1
+
+[node name="Sounds" type="Node2D" parent="." unique_id=1643029577]
+
+[node name="VictorySoundPlayer" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1034183292]
+stream = ExtResource("10_s00uq")
+
+[node name="LoseSoundPlayer" type="AudioStreamPlayer2D" parent="Sounds" unique_id=1028759231]
+stream = ExtResource("11_1mwsf")
 
 [connection signal="pressed" from="GameOverMenus/RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="GameOverMenus/ReturnButton" to="." method="_on_return_button_pressed"]

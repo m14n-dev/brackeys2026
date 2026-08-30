@@ -13,6 +13,13 @@ NO RESPONSE
 FROM [::1] 
 FOR %d SECONDS"
 
+var victory_sound_player: AudioStreamPlayer2D
+var lose_sound_player: AudioStreamPlayer2D
+
+func _ready() -> void:
+	victory_sound_player = $Sounds/VictorySoundPlayer
+	lose_sound_player = $Sounds/LoseSoundPlayer
+
 func _process(delta):
 	if Engine.is_editor_hint():
 		return
@@ -26,10 +33,12 @@ func _process(delta):
 		$GameOverLabel.visible = true
 		$GameOverMenus.visible = true
 		is_game_over = true
+		lose_sound_player.play()
 	elif is_all_enemies_gone():
 		$GameWonLabel.visible = true
 		$GameWonMenus.visible = true
 		is_game_won = true
+		victory_sound_player.play()
 	
 func is_all_enemies_gone():
 	for faction in get_all_factions():
