@@ -9,6 +9,10 @@
 [ext_resource type="Script" uid="uid://b4aeq7ah88bh1" path="res://ai/AllOutAiBehavior.gd" id="7_y0bn5"]
 [ext_resource type="Script" uid="uid://3yvav4q5ks4v" path="res://ai/RetributionAiBehavior.gd" id="8_q0mk0"]
 [ext_resource type="PackedScene" uid="uid://4out875511ee" path="res://server/server.tscn" id="9_7pqqm"]
+[ext_resource type="PackedScene" uid="uid://djhky8qb4vngw" path="res://connection/Connection.tscn" id="10_u2r75"]
+[ext_resource type="Texture2D" uid="uid://djx765yr6x4tc" path="res://arena/arena_6/conn_a1_a2.png" id="11_3ttsm"]
+[ext_resource type="Texture2D" uid="uid://davdc5iojlsc2" path="res://arena/arena_6/conn_a1_a3.png" id="12_3ttsm"]
+[ext_resource type="Texture2D" uid="uid://7qemt83qao7j" path="res://arena/arena_6/conn_a2_a3.png" id="13_ee6xw"]
 
 [sub_resource type="Resource" id="Resource_xr3i8"]
 script = ExtResource("5_y0bn5")
@@ -25,6 +29,24 @@ metadata/_custom_type_script = "uid://b4aeq7ah88bh1"
 [sub_resource type="Resource" id="Resource_ps37i"]
 script = ExtResource("8_q0mk0")
 metadata/_custom_type_script = "uid://3yvav4q5ks4v"
+
+[sub_resource type="Curve2D" id="Curve2D_7pqqm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 93, 17, 0, 0, 0, 0, 15, -28)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_3ttsm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 66, -38)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_0ynhl"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 22, 0, 0, 0, 0, 225, 22, 0, 0, 0, 0, 260, 1)
+}
+point_count = 4
 
 [node name="Arena6" type="Node2D" unique_id=1342764802]
 
@@ -98,4 +120,91 @@ scale = Vector2(0.68989706, 0.68989706)
 power = 10.0
 faction_id = 1
 
+[node name="B2" parent="." unique_id=1984583557 instance=ExtResource("9_7pqqm")]
+position = Vector2(286, 263.00003)
+scale = Vector2(0.7155287, 0.7155287)
+power = 10.0
+faction_id = 1
+
+[node name="B3" parent="." unique_id=1288757811 instance=ExtResource("9_7pqqm")]
+position = Vector2(495, 143.00002)
+scale = Vector2(0.7155287, 0.7155287)
+power = 10.0
+faction_id = 1
+
+[node name="C2" parent="." unique_id=1596484909 instance=ExtResource("9_7pqqm")]
+position = Vector2(857, 262)
+scale = Vector2(0.7155287, 0.7155287)
+power = 10.0
+faction_id = 1
+
+[node name="C3" parent="." unique_id=167111523 instance=ExtResource("9_7pqqm")]
+position = Vector2(649, 142)
+scale = Vector2(0.716, 0.716)
+power = 10.0
+faction_id = 1
+
+[node name="A1toA2" parent="." unique_id=1579168215 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+point_a = NodePath("../PlayerA")
+point_b = NodePath("../A2")
+max_package_size = 10
+
+[node name="Sprite2D" parent="A1toA2" index="0" unique_id=343096505]
+position = Vector2(454, 495)
+texture = ExtResource("11_3ttsm")
+
+[node name="PathAtoB" parent="A1toA2" index="1" unique_id=860685861]
+position = Vector2(400, 500)
+curve = SubResource("Curve2D_7pqqm")
+
+[node name="PortA" parent="A1toA2" index="2" unique_id=954255240]
+position = Vector2(493, 517)
+
+[node name="PortB" parent="A1toA2" index="3" unique_id=706148699]
+position = Vector2(415, 472)
+
+[node name="A1toA3" parent="." unique_id=1223421560 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+position = Vector2(415, 472)
+point_a = NodePath("../PlayerA")
+point_b = NodePath("../A3")
+max_package_size = 10
+
+[node name="Sprite2D" parent="A1toA3" index="0" unique_id=343096505]
+position = Vector2(280, 19)
+texture = ExtResource("12_3ttsm")
+
+[node name="PathAtoB" parent="A1toA3" index="1" unique_id=860685861]
+position = Vector2(247, 38)
+curve = SubResource("Curve2D_3ttsm")
+
+[node name="PortA" parent="A1toA3" index="2" unique_id=954255240]
+position = Vector2(247, 38)
+
+[node name="PortB" parent="A1toA3" index="3" unique_id=706148699]
+position = Vector2(312, 0)
+
+[node name="Connection" parent="." unique_id=724696252 node_paths=PackedStringArray("point_a", "point_b") instance=ExtResource("10_u2r75")]
+z_index = -1
+position = Vector2(415, 472)
+point_a = NodePath("../A2")
+point_b = NodePath("../A3")
+max_package_size = 10
+
+[node name="Sprite2D" parent="Connection" index="0" unique_id=343096505]
+position = Vector2(157, -8)
+texture = ExtResource("13_ee6xw")
+
+[node name="PathAtoB" parent="Connection" index="1" unique_id=860685861]
+position = Vector2(27, -16)
+curve = SubResource("Curve2D_0ynhl")
+
+[node name="PortA" parent="Connection" index="2" unique_id=954255240]
+position = Vector2(27, -16)
+
+[node name="PortB" parent="Connection" index="3" unique_id=706148699]
+position = Vector2(287, -15)
+
 [editable path="Arena"]
+[editable path="A1toA2"]
+[editable path="A1toA3"]
+[editable path="Connection"]
